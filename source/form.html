@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма</title>
+</head>
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo" href="index.html">
+      <img src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
+    </a>
+    <nav class="main-nav">
+      <div class="main-nav__wrapper">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a>Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main-container form-section">
+    <h1 class="form-section__form-title">Подбор программы</h1>
+    <p class="form-section__text">Заполните анкету, и мы подберем
+        программу питания для вашего кота</p>
+    <form class="form order-form" action="https://echo.htmlacademy.ru/" method="post">
+      <fieldset class="form__recipient">
+        <legend class="visually-hidden">Данные кота</legend>
+        <label class="form__field order-form__field" for="recipient-name">
+          <span class="form__field-label">Имя:*</span>
+          <input class="form__field-control input" type="text" id="recipient-name" name="form-recipient-name" value="Барсик" required>
+        </label>
+        <label class="form__field order-form__field" for="recipient-weight">
+          <span class="form__field-label">Вес (кг):*</span>
+          <input class="form__field-control input" type="number" id="recipient-weight" name="form-recipient-weight" value="7" required>
+        </label>
+        <label class="form__field order-form__field" for="recipient-age">
+          <span class="form__field-label">Возраст (лет):</span>
+          <input class="form__field-control input" type="number" id="recipient-age" name="form-recipient-age">
+        </label>
+      </fieldset>
+      <fieldset class="form__result result-form">
+        <legend class="visually-hidden">Желаемый результат</legend>
+        <ul class="result-form__list">
+          <li class="result-form__item">
+            <label class="form__field order-form__field">
+              <input class="form__field-control input" type="radio" value="Weight-loss" name="form__result-group" checked>
+              <span class="form__field-label">Похудение</span>
+            </label>
+          </li>
+          <li class="result-form__item">
+            <label class="form__field order-form__field">
+              <input class="form__field-control input" type="radio" value="Mass-gain" name="form__result-group">
+              <span class="form__field-label">Набор массы</span>
+            </label>
+          </li>
+          <li class="result-form__item">
+            <label class="form__field order-form__field">
+              <input class="form__field-control input" type="radio" value="Need-advice" name="form__result-group">
+              <span class="form__field-label">Не знаю (Нужен ваш совет)</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form__owner">
+        <legend class="form__title">Контактные данные (владельца кота)</legend>
+        <div class="form__wrapper">
+          <label class="form__field form__field--email order-form__field" for="owner-email">
+            <span class="form__field-label">E-mail:*</span>
+            <input class="form__field-control input" type="email" id="owner-email" name="form-owner-email" value="kuklachev@gmail.com" required>
+          </label>
+          <label class="form__field form__field--phone order-form__field" for="owner-phone">
+            <span class="form__field-label">Телефон:*</span>
+            <input class="form__field-control input" type="text" id="owner-phone" name="form-owner-phone" value="8 (960) 900-60-90" required>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="form__comment">
+        <legend class="form__comment-title">Комментарий</legend>
+        <label class="form__field order-form__field" for="owner-comment">
+          <textarea class="form__field-control input" id="owner-comment" name="form-owner-comment"  placeholder="Расскажите обо всех повадках кота"></textarea>
+        </label>
+      </fieldset>
+      <fieldset class="form__additional additional-form">
+        <legend class="additional-form__title">Дополнительно</legend>
+        <ul class="additional-form__list">
+          <li class="additional-form__item">
+            <label class="form__field additional-form__field order-form__field">
+              <input class="form__field-control input" type="checkbox" name="Sweetener" checked>
+              <span class="form__field-label">сахарозаменитель</span>
+            </label>
+          </li>
+          <li class="additional-form__item">
+            <label class="form__field additional-form__field order-form__field">
+              <input class="form__field-control input" type="checkbox" name="Milk">
+              <span class="form__field-label">молоко</span>
+            </label>
+          </li>
+          <li class="additional-form__item">
+            <label class="form__field additional-form__field order-form__field">
+              <input class="form__field-control input" type="checkbox" name="Water">
+              <span class="form__field-label">питьевая вода</span>
+            </label>
+          </li>
+          <li class="additional-form__item">
+            <label class="form__field additional-form__field order-form__field">
+              <input class="form__field-control input" type="checkbox" name="Vitamins">
+              <span class="form__field-label">витамины</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="form__button button" type="submit">Отправить заявку</button>
+    </form>
+    <p class="form__legend">
+      <small>* — Обязательные поля</small>
+    </p>
+  </main>
+  <footer class="footer">
+    <div class="invitation__wrapper">
+      <strong class="invitation_slogan">Приглашаем к сотрудничеству дилеров!</strong>
+      <address class="invitation__address">
+          ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
+      </address>
+    </div>
+    <img class="footer__map" src="#" alt="Адрес магазина на карте.">
+    <div class="footer__wrapper">
+      <img class="footer__logo" src="img/footer-logo.svg" width="128" height="24" alt="Логотип магазина Кэт энерджи.">
+      <div class="footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright copyright">
+        <b class="copyright__text">HTML Academy</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
