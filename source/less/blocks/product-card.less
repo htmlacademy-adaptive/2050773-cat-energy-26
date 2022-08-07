@@ -7,17 +7,20 @@
     grid-template-areas:
       "image title "
       "image list";
+    grid-template-columns: auto 138px;
   }
 
   &__image {
     grid-area: image;
     display: block;
+    justify-self: center;
+    align-self: center;
   }
 
   &__title {
     font-size: 16px;
     line-height: 20px;
-    font-weight: 400;
+    font-weight: inherit;
     text-transform: uppercase;
     color: #000000;
     grid-area: title;
@@ -27,7 +30,9 @@
 
   &__list {
     margin: 0;
+    margin-bottom: 22px;
     padding: 0;
+    padding-top: 14px;
     list-style-type: none;
     font-family: "Arial", sans-serif;
     font-size: 12px;

@@ -1,23 +1,47 @@
 .main-product {
   color: #ffffff;
   text-align: center;
-  padding: 27px 35px 0 35px;
+  padding: 0 35px 0 35px;
+  position: relative;
+
+  &__wrapper {
+    background-color: rgba(104, 183, 56, 0.85);
+    height: 275px;
+    padding-top: 27px;
+    margin-bottom: 138px;
+    position: relative;
+  }
 
   &__title {
-    font-family: "Oswald", sans-serif;
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: 400;
     margin: 0;
     margin-bottom: 25px;
+    z-index: 1;
+  }
+
+  &::before {
+    position: absolute;
+    content: " ";
+    width: 320px;
+    height: 302px;
+    left: 560px;
+    background-image: url("../img/main-product-background-pic-mobile.png");
+    z-index: -1;
   }
 
   &__commercial-slogan {
-    font-family: "Oswald", sans-serif;
-    font-size: 14px;
-    line-height: 14px;
-    font-weight: 400;
     text-transform: uppercase;
     margin: 0;
+    z-index: 2;
+    margin-bottom: 166px;
+  }
+
+  &__commercial-slogan::before {
+    position: absolute;
+    content: " ";
+    width: 280px;
+    height: 270px;
+    top: 170px;
+    left: 550px;
+    background-image: url("../img/main-product-pic-mobile.png");
   }
 }

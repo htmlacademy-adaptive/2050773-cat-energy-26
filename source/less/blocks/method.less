@@ -4,12 +4,8 @@
   }
 
   &__title {
-    font-family: "Oswald", sans-serif;
-    font-size: 36px;
-    line-height: 40px;
-    font-weight: 400;
     margin: 0;
-    padding: 0;
+    margin-bottom: 40px;
   }
 
   &__list {
@@ -18,11 +14,49 @@
     list-style-type: none;
     color: #444444;
     font-family: "Arial", sans-serif;
-    font-size: 14px;
     line-height: 18px;
   }
 
-  &__item:not(last-child) {
+  &__item {
+    padding-left: 80px;
+    position: relative;
+  }
+
+  &__item::before {
+    position: absolute;
+    content: " ";
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__item:not(:last-child) {
     margin-bottom: 26px;
+  }
+
+  &__item--nutrition {
+    background-image: url("../img/icons/leaf.svg");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+  }
+
+  &__item--boil {
+    background-image: url("../img/icons/boil.svg");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+  }
+
+  &__item--food {
+    background-image: url("../img/icons/eat.svg");
+    background-repeat: no-repeat;
+    background-position: 15px center;
+  }
+
+  &__item--results {
+    background-image: url("../img/icons/watches.svg");
+    background-repeat: no-repeat;
+    background-position: 15px center;
   }
 }

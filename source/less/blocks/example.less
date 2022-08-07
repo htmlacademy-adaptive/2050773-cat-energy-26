@@ -1,27 +1,22 @@
 .example {
   padding: 25px 20px 40px 20px;
 
+  &__text {
+    color: #444444;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
   &__title {
-    font-family: "Oswald", sans-serif;
-    font-size: 36px;
-    line-height: 40px;
-    font-weight: 400;
     margin: 0;
     margin-bottom: 40px;
   }
 
-  &__text {
-    color: #444444;
-    font-family: "Arial", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    margin: 0;
-  }
-
   &__term {
-    font-family: "Oswald", sans-serif;
     font-size: 24px;
     text-transform: uppercase;
+    margin-bottom: 9px;
   }
 
   &__description {
@@ -30,12 +25,26 @@
     line-height: 12px;
     margin: 0;
     color: #444444;
-
   }
 
   &__list {
     display: flex;
     justify-content: space-around;
     text-align: center;
+  }
+
+  &__all-costs {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__all-costs-term {
+    text-transform: uppercase;
+  }
+
+  &__illustration {
+    height: 232px;
+    background-image: url("../img/example-pic-mobile.png");
+    background-position: center;
   }
 }
