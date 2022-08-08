@@ -1,0 +1,23 @@
+.main-header {
+  padding: 10px 20px 17px 20px;
+
+  &__logo {
+    position: relative;
+  }
+
+  &__logo::after {
+    position: absolute;
+    content: " ";
+    background-image: url("../img/logo-title-mobile.svg");
+    background-repeat: no-repeat;
+    width: 101px;
+    height: 18px;
+    left: 90px;
+    bottom: 12px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
