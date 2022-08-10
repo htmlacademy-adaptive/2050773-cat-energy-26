@@ -5,12 +5,35 @@
 
   &__wrapper {
     background-color: #f2f2f2;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    @media (min-width: @tablet-width) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
   }
 
   &__container {
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: @desktop-width;
+    }
   }
 
   &__logo {

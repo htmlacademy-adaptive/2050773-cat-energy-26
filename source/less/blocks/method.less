@@ -1,6 +1,16 @@
 .method {
   &__wrapper {
     padding: 20px;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
   }
 
   &__title {
@@ -15,6 +25,16 @@
     color: #444444;
     font-family: "Arial", sans-serif;
     line-height: 18px;
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__item {
@@ -60,3 +80,6 @@
     background-position: 15px center;
   }
 }
+
+
+

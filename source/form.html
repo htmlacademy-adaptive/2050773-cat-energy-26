@@ -2,91 +2,95 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Форма</title>
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body class="page__body">
   <div class="page-container">
     <header class="main-header">
-      <div class="main-header__wrapper">
-        <a class="main-header__logo">
-          <img src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
-        </a>
-        <button class="main-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <div class="main-header__container">
+        <div class="main-header__logo-wrapper">
+          <a class="main-header__logo">
+            <img src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
+          </a>
+          <button class="main-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
   </div>
   <main class="main-container page-container">
     <div class="form-section">
       <h1 class="form-section__title">Подбор программы</h1>
-      <p class="form-section__text">Заполните анкету, и мы подберем
+      <p class="form-section__text">Заполните анкету, и мы подберем<br>
           программу питания для вашего кота</p>
     </div>
     <form class="form order-form" action="https://echo.htmlacademy.ru/" method="post">
-      <fieldset class="form__fieldset form-recipient">
-        <legend class="visually-hidden">Данные кота</legend>
-        <label class="form__field order-form__field" for="recipient-name">
-          <span class="form__field-label">Имя:*</span>
-          <input class="form__field-control input" type="text" id="recipient-name" name="form-recipient-name" value="Барсик" required>
-        </label>
-        <label class="form__field order-form__field" for="recipient-weight">
-          <span class="form__field-label">Вес (кг):*</span>
-          <input class="form__field-control input" type="number" id="recipient-weight" name="form-recipient-weight" value="7" required>
-        </label>
-        <label class="form__field order-form__field" for="recipient-age">
-          <span class="form__field-label">Возраст (лет):</span>
-          <input class="form__field-control input" type="number" id="recipient-age" name="form-recipient-age">
-        </label>
-      </fieldset>
-      <fieldset class="form__fieldset form-result result-form">
-        <legend class="visually-hidden">Желаемый результат</legend>
-        <ul class="result-form__list">
-          <li class="result-form__item">
-            <label class="form__field order-form__field">
-              <input class="order-form__field-control input" type="radio" value="Weight-loss" name="form__result-group" checked>
-              <span class="form__field-label">Похудение</span>
-            </label>
-          </li>
-          <li class="result-form__item">
-            <label class="form__field order-form__field">
-              <input class="order-form__field-control input" type="radio" value="Mass-gain" name="form__result-group">
-              <span class="form__field-label">Набор массы</span>
-            </label>
-          </li>
-          <li class="result-form__item">
-            <label class="form__field order-form__field">
-              <input class="order-form__field-control input" type="radio" value="Need-advice" name="form__result-group">
-              <span class="form__field-label">Не знаю (Нужен ваш совет)</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="form__wrapper">
+        <fieldset class="form__fieldset form-recipient">
+          <legend class="visually-hidden">Данные кота</legend>
+          <label class="form__field order-form__field" for="recipient-name">
+            <span class="form__field-label">Имя:*</span>
+            <input class="form__field-control input" type="text" id="recipient-name" name="form-recipient-name" value="Барсик" required>
+          </label>
+          <label class="form__field order-form__field" for="recipient-weight">
+            <span class="form__field-label">Вес (кг):*</span>
+            <input class="form__field-control input" type="number" id="recipient-weight" name="form-recipient-weight" value="7" required>
+          </label>
+          <label class="form__field order-form__field" for="recipient-age">
+            <span class="form__field-label">Возраст (лет):</span>
+            <input class="form__field-control input" type="number" id="recipient-age" name="form-recipient-age">
+          </label>
+        </fieldset>
+        <fieldset class="form__fieldset form-result result-form">
+          <legend class="visually-hidden">Желаемый результат</legend>
+          <ul class="result-form__list">
+            <li class="result-form__item">
+              <label class="form__field order-form__field">
+                <input class="order-form__field-control input" type="radio" value="Weight-loss" name="form__result-group" checked>
+                <span class="form__field-label">Похудение</span>
+              </label>
+            </li>
+            <li class="result-form__item">
+              <label class="form__field order-form__field">
+                <input class="order-form__field-control input" type="radio" value="Mass-gain" name="form__result-group">
+                <span class="form__field-label">Набор массы</span>
+              </label>
+            </li>
+            <li class="result-form__item">
+              <label class="form__field order-form__field">
+                <input class="order-form__field-control input" type="radio" value="Need-advice" name="form__result-group">
+                <span class="form__field-label">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
       <fieldset class="form__fieldset form-owner">
         <legend class="form__title">Контактные данные (владельца кота)</legend>
-        <div class="form__wrapper">
-          <label class="form__field form__field--email order-form__field" for="owner-email">
+        <div class="form-owner__wrapper">
+          <label class="form__field form-owner__email order-form__field" for="owner-email">
             <span class="form__field-label">E-mail:*</span>
-            <input class="form__field-control input" type="email" id="owner-email" name="form-owner-email" value="kuklachev@gmail.com" required>
+            <input class="form__field-control form-owner__control input" type="email" id="owner-email" name="form-owner-email" value="kuklachev@gmail.com" required>
           </label>
-          <label class="form__field form__field--phone order-form__field" for="owner-phone">
+          <label class="form__field form-owner__phone order-form__field" for="owner-phone">
             <span class="form__field-label">Телефон:*</span>
-            <input class="form__field-control input" type="text" id="owner-phone" name="form-owner-phone" value="8 (960) 900-60-90" required>
+            <input class="form__field-control form-owner__control input" type="text" id="owner-phone" name="form-owner-phone" value="8 (960) 900-60-90" required>
           </label>
         </div>
       </fieldset>
@@ -139,7 +143,7 @@
             ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
         </address>
       </div>
-      <img class="footer__map" src="./img/footer-map.jpg" alt="Адрес магазина на карте." width="320" height="362">
+      <!-- <img class="footer__map" src="./img/footer-map.jpg" alt="Адрес магазина на карте." width="320" height="362"> -->
     </div>
     <div class="footer__wrapper">
       <div class="page-container">

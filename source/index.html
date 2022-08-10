@@ -2,13 +2,14 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat energy</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-  <div class="page-container">
-    <header class="main-header">
-      <div class="main-header__wrapper">
+  <header class="main-header">
+    <div class="main-header__container">
+      <div class="main-header__logo-wrapper">
         <a class="main-header__logo">
           <img src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
         </a>
@@ -29,8 +30,8 @@
           </li>
         </ul>
       </nav>
-    </header>
-  </div>
+    </div>
+  </header>
   <main class="main-container">
     <h1 class="visually-hidden">Магазин Cat Energy</h1>
     <section class="main-product">
@@ -47,7 +48,7 @@
       <ul class="product-options__list">
         <li class="product-options__item">
           <h3 class="product-options__title">Похудение</h3>
-           <p class="product-options__text">Ваш кот весит больше собаки и почти утратил способность
+          <p class="product-options__text">Ваш кот весит больше собаки и почти утратил способность
               лазить по деревьям? Пора на диету! Cat Energy Slim поможет
               вашему питомцу сбросить лишний вес.
           </p>
@@ -89,29 +90,35 @@
         </ul>
       </div>
     </section>
-    <div class="main-container__example-wrapper">
+    <div class="">
       <div class="page-container">
         <section class="example">
           <h2 class="example__title heading">Живой пример</h2>
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой
-            обычный корм на Cat Energy Slim. Отличный результат
-            без изнуряющих тренировок! При этом он не менял своих
-            привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="example__list">
-            <div class="example__wrapper">
-              <dt class="example__term">5 кг</dt>
-              <dd class="example__description">снижение веса</dd>
+          <div class="example__container">
+            <div class="example__text-container">
+              <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой
+                обычный корм на Cat Energy Slim. Отличный результат
+                без изнуряющих тренировок! При этом он не менял своих
+                привычек и по-прежнему спит по 16 часов в день.</p>
+              <div class="example__list-wrapper">
+                <dl class="example__list">
+                  <div class="example__wrapper">
+                    <dt class="example__term">5 кг</dt>
+                    <dd class="example__description">снижение веса</dd>
+                  </div>
+                  <div class="example__wrapper">
+                    <dt class="example__term">60 дней</dt>
+                    <dd class="example__description">затрачено времени</dd>
+                  </div>
+                </dl>
+                <div class="example__all-costs">
+                  <span class="example__all-costs-term">затраты на питание:</span>
+                  <span class="example__all-costs-term">15 000 руб.</span>
+                </div>
+              </div>
             </div>
-            <div class="example__wrapper">
-              <dt class="example__term">60 дней</dt>
-              <dd class="example__description">затрачено времени</dd>
-            </div>
-          </dl>
-          <div class="example__all-costs">
-            <span class="example__all-costs-term">затраты на питание:</span>
-            <span class="example__all-costs-term">15 000 руб.</span>
+            <div class="example__illustration"></div>
           </div>
-          <div class="example__illustration"></div>
         </section>
       </div>
     </div>
@@ -124,7 +131,7 @@
             ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
         </address>
       </div>
-      <img class="footer__map" src="./img/footer-map.jpg" alt="Адрес магазина на карте." width="320" height="362">
+      <!-- <img class="footer__map" src="./img/footer-map.jpg" alt="Адрес магазина на карте." width="320" height="362"> -->
     </div>
     <div class="footer__wrapper">
       <div class="page-container">

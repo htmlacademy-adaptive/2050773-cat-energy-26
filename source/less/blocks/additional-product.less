@@ -1,4 +1,15 @@
 .additional-product {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 894px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
   &__name {
     margin: 0;
     margin-bottom: 13px;
@@ -13,7 +24,7 @@
 
   &__list {
     margin: 0;
-    margin-bottom: 13px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     font-family: "Arial", sans-serif;
@@ -21,7 +32,23 @@
     line-height: 14px;
   }
 
+  &__term {
+    @media (min-width: @desktop-width) {
+      order: 2;
+    }
+  }
+
+
   &__definition {
     margin: 0;
   }
+
+  &__button {
+    width: 100%;
+
+    @media (min-width: @desktop-width) {
+      width: 244px;
+    }
+  }
+
 }

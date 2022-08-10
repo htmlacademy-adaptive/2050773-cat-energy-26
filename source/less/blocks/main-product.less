@@ -1,47 +1,72 @@
 .main-product {
   color: #ffffff;
   text-align: center;
-  padding: 0 35px 0 35px;
   position: relative;
+
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+  }
 
   &__wrapper {
     background-color: rgba(104, 183, 56, 0.85);
-    height: 275px;
     padding-top: 27px;
-    margin-bottom: 138px;
+    padding-left: 20px;
+    padding-right: 20px;
     position: relative;
+
+    @media (max-width: @mobile-width-only) {
+      height: 275px;
+      margin-bottom: 138px;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-color: #ffffff;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
   }
 
   &__title {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 250px;
     z-index: 1;
   }
 
-  &::before {
-    position: absolute;
-    content: " ";
-    width: 320px;
-    height: 302px;
-    left: 560px;
-    background-image: url("../img/main-product-background-pic-mobile.png");
-    z-index: -1;
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: " ";
+  //   width: 320px;
+  //   height: 302px;
+  //   background-image: url("../img/main-product-background-pic-mobile.png");
+  //   z-index: -1;
+  // }
 
   &__commercial-slogan {
     text-transform: uppercase;
     margin: 0;
     z-index: 2;
-    margin-bottom: 166px;
   }
 
-  &__commercial-slogan::before {
-    position: absolute;
-    content: " ";
-    width: 280px;
-    height: 270px;
-    top: 170px;
-    left: 550px;
-    background-image: url("../img/main-product-pic-mobile.png");
+  &__button {
+    max-width: 280px;
+
+    @media (min-width: @tablet-width) {
+      width: 244px;
+    }
+
   }
+
+  // &__commercial-slogan::before {
+  //   position: absolute;
+  //   content: " ";
+  //   width: 280px;
+  //   height: 270px;
+  //   background-image: url("../img/main-product-pic-mobile.png");
+  // }
 }

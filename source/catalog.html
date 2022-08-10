@@ -2,33 +2,36 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
   <div class="page-container">
     <header class="main-header">
-      <div class="main-header__wrapper">
-        <a class="main-header__logo">
-          <img src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
-        </a>
-        <button class="main-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <div class="main-header__container">
+        <div class="main-header__logo-wrapper">
+          <a class="main-header__logo">
+            <img src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
+          </a>
+          <button class="main-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
   </div>
   <main class="main-container catalog page-container">
@@ -154,57 +157,63 @@
             <button class="product-card__button button" type="button">Заказать</button>
           </section>
         </li>
-      </ul>
-    </div>
-    <div class="catalog__show-more show-more">
-      <button class="show-more__button-plus" type="button"></button>
-      <strong class="show-more__text">Показать еще 100500 товаров</strong>
-      <p class="show-more__text-additional">На самом деле вкусов гораздо больше!</p>
-      <button class="show-more__button" type="button">Показать все</button>
-    </div>
-    <section class="catalog__additional additional-products">
-      <h2 class="additional-products__title">Дополнительные товары</h2>
-      <ul class="additional-products__list">
-        <li class="additional-products__item additional-product">
-          <h3 class="additional-product__name">Сахарозаменитель</h3>
-          <dl class="additional-product__list">
-            <dt class="product__term">200 Р.</dt>
-            <dd class="product__definition">1 упаковка (100 г)</dd>
-          </dl>
-          <button class="additional-product__button button" type="button">Заказать</button>
-        </li>
-        <li class="additional-products__item additional-product">
-          <h3 class="additional-product__name">Питьевая вода</h3>
-          <dl class="additional-product__list">
-            <dt class="additional-product__term">50 Р.</dt>
-            <dd class="additional-product__definition">5 литров</dd>
-          </dl>
-          <button class="additional-product__button button" type="button">Заказать</button>
-        </li>
-        <li class="additional-products__item additional-product">
-          <h3 class="additional-product__name">Молоко</h3>
-          <dl class="additional-product__list">
-            <dt class="additional-product__term">100 Р.</dt>
-            <dd class="additional-product__definition">1 литр</dd>
-          </dl>
-          <button class="additional-product__button button" type="button">Заказать</button>
-        </li>
-        <li class="additional-products__item additional-product">
-          <h3 class="additional-product__name">Витамины</h3>
-          <dl class="additional-product__list">
-            <dt class="additional-product__term">300 Р.</dt>
-            <dd class="additional-product__definition">1 упаковка (30 г)</dd>
-          </dl>
-          <button class="additional-product__button button" type="button">Заказать</button>
+        <li class="catalog__item show-more">
+          <section class="catalog__product product-card">
+            <a class="product-card__link" href="#">
+              <img class="product-card__image" src="#" alt="">
+              <h3 class="product-card__title show-more__text">Показать еще 100500 товаров</h3>
+              <span class="show-more__text-additional">На самом деле вкусов гораздо больше!</span>
+            </a>
+            <button class="button product-card__button show-more__button" type="button">Показать все</button>
+          </section>
         </li>
       </ul>
-    </section>
-    <section class="catalog__special special-offer">
-      <h2 class="visually-hidden">Специальное предложение</h2>
-      <p class="special-offer__text">Закажите все<br>
-        и получите чехол для<br> кота в подарок!
-      </p>
-    </section>
+      </div>
+    <div class="catalog__container">
+      <section class="catalog__additional additional-products">
+        <h2 class="additional-products__title">Дополнительные товары</h2>
+        <ul class="additional-products__list">
+          <li class="additional-products__item additional-product">
+            <h3 class="additional-product__name">Сахарозаменитель</h3>
+            <dl class="additional-product__list">
+              <dt class="additional-product__term">200 Р.</dt>
+              <dd class="additional-product__definition">1 упаковка (100 г)</dd>
+            </dl>
+            <button class="additional-product__button button" type="button">Заказать</button>
+          </li>
+          <li class="additional-products__item additional-product">
+            <h3 class="additional-product__name">Питьевая вода</h3>
+            <dl class="additional-product__list">
+              <dt class="additional-product__term">50 Р.</dt>
+              <dd class="additional-product__definition">5 литров</dd>
+            </dl>
+            <button class="additional-product__button button" type="button">Заказать</button>
+          </li>
+          <li class="additional-products__item additional-product">
+            <h3 class="additional-product__name">Молоко</h3>
+            <dl class="additional-product__list">
+              <dt class="additional-product__term">100 Р.</dt>
+              <dd class="additional-product__definition">1 литр</dd>
+            </dl>
+            <button class="additional-product__button button" type="button">Заказать</button>
+          </li>
+          <li class="additional-products__item additional-product">
+            <h3 class="additional-product__name">Витамины</h3>
+            <dl class="additional-product__list">
+              <dt class="additional-product__term">300 Р.</dt>
+              <dd class="additional-product__definition">1 упаковка (30 г)</dd>
+            </dl>
+            <button class="additional-product__button button" type="button">Заказать</button>
+          </li>
+        </ul>
+      </section>
+      <section class="catalog__special special-offer">
+        <h2 class="visually-hidden">Специальное предложение</h2>
+        <p class="special-offer__text">Закажите все<br>
+          и получите чехол для<br> кота в подарок!
+        </p>
+      </section>
+    </div>
   </main>
   <footer class="footer">
     <div class="page-container">
@@ -214,7 +223,7 @@
             ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
         </address>
       </div>
-      <img class="footer__map" src="./img/footer-map.jpg" alt="Адрес магазина на карте." width="320" height="362">
+      <!-- <img class="footer__map" src="./img/footer-map.jpg" alt="Адрес магазина на карте." width="320" height="362"> -->
     </div>
     <div class="footer__wrapper">
       <div class="page-container">

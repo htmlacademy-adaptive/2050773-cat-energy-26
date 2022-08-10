@@ -1,6 +1,17 @@
 .main-header {
   padding: 10px 20px 17px 20px;
 
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+    max-width: @desktop-width;
+  }
+
   &__logo {
     position: relative;
   }
@@ -16,8 +27,21 @@
     bottom: 12px;
   }
 
-  &__wrapper {
+  &__logo-wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__toggle {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &__container {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }

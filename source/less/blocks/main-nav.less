@@ -4,10 +4,21 @@
     padding: 0;
     list-style-type: none;
     text-align: center;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      min-width: 440px;
+      gap: 34px;
+    }
   }
 
   &__item {
     margin-top: 22px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+      padding-top: 10px;
+    }
   }
 
   &__link {
