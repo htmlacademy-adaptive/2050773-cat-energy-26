@@ -1,13 +1,32 @@
 .product-card {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+
+  &__button {
+    width: 280px;
+
+    @media (min-width: @tablet-width) {
+      width: 248px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 168px;
+    }
+  }
 
   &__link {
     text-decoration: none;
     display: grid;
     grid-template-areas:
-      "image title "
+      "image title"
       "image list";
     grid-template-columns: auto 138px;
+
+    @media (min-width: @tablet-width) {
+      grid-template-areas: "image"
+                            "title"
+                            "list";
+      grid-template-columns: 247px;
+    }
   }
 
   &__image {

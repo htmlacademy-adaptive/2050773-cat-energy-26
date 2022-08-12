@@ -1,5 +1,6 @@
 .main-header {
-  padding: 10px 20px 17px 20px;
+  padding-top: 10px;
+  padding-bottom: 17px;
 
   &__logo {
     position: relative;
@@ -16,8 +17,21 @@
     bottom: 12px;
   }
 
-  &__wrapper {
+  &__logo-wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__toggle {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &__container {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }

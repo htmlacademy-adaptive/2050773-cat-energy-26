@@ -1,7 +1,4 @@
 .form {
-  margin-left: 20px;
-  margin-right: 20px;
-
   &__fieldset {
     border: none;
     display: flex;
@@ -36,5 +33,13 @@
     font-family: "Arial", sans-serif;
     line-height: 16px;
     text-align: center;
+  }
+
+  &__wrapper {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 }

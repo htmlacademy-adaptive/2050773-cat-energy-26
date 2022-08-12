@@ -1,5 +1,13 @@
 .example {
-  padding: 25px 20px 40px 20px;
+  background-color: #eaeaea;
+
+  @media (min-width: @tablet-width) {
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 
   &__text {
     color: #444444;
@@ -11,6 +19,7 @@
   &__title {
     margin: 0;
     margin-bottom: 40px;
+    padding-top: 25px;
   }
 
   &__term {
@@ -34,17 +43,51 @@
   }
 
   &__all-costs {
-    margin-bottom: 40px;
     text-align: center;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
   }
 
   &__all-costs-term {
     text-transform: uppercase;
   }
 
-  &__illustration {
-    height: 232px;
-    background-image: url("../img/example-pic-mobile.png");
-    background-position: center;
+  // &__illustration {
+  //   height: 232px;
+  //   background-image: url("../img/example-pic-mobile.png");
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  // }
+
+  &__list-wrapper {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: @tablet-width) {
+      margin-right: 42px;
+    }
+  }
+
+  &__container {
+    @media (min-width: @desktop-width) {
+      background-color: #eaeaea;
+      padding-left: 110px;
+      padding-right: 110px;
+      padding-top: 70px;
+    }
+  }
+
+  &__text-container {
+    @media (min-width: @desktop-width) {
+      max-width: 450px;
+    }
   }
 }
