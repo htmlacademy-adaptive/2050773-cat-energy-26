@@ -13,22 +13,24 @@
         <a class="main-header__logo">
           <img src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
         </a>
-        <button class="main-header__toggle" type="button">
+      </div>
+      <nav class="main-nav main-nav--opened">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-      </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -50,7 +52,7 @@
                 <dd class="product-card__definition-price">Цена</dd>
               </dl>
             </a>
-            <button class="product-card__button button" type="button">Заказать</button>
+            <button class="product-card__button button button__green" type="button">Заказать</button>
           </section>
         </li>
         <li class="catalog__item">
@@ -67,7 +69,7 @@
                 <dd class="product-card__definition-price">Цена</dd>
               </dl>
             </a>
-            <button class="product-card__button button" type="button">Заказать</button>
+            <button class="product-card__button button button__green" type="button">Заказать</button>
           </section>
         </li>
         <li class="catalog__item">
@@ -84,7 +86,7 @@
                 <dd class="product-card__definition-price">Цена</dd>
               </dl>
             </a>
-            <button class="product-card__button button" type="button">Заказать</button>
+            <button class="product-card__button button button__green" type="button">Заказать</button>
           </section>
         </li>
         <li class="catalog__item">
@@ -101,7 +103,7 @@
                 <dd class="product-card__definition-price">Цена</dd>
               </dl>
             </a>
-            <button class="product-card__button button" type="button">Заказать</button>
+            <button class="product-card__button button button__green" type="button">Заказать</button>
           </section>
         </li>
         <li class="catalog__item">
@@ -118,7 +120,7 @@
                 <dd class="product-card__definition-price">Цена</dd>
               </dl>
             </a>
-            <button class="product-card__button button" type="button">Заказать</button>
+            <button class="product-card__button button button__green" type="button">Заказать</button>
           </section>
         </li>
         <li class="catalog__item">
@@ -135,7 +137,7 @@
                 <dd class="product-card__definition-price">Цена</dd>
               </dl>
             </a>
-            <button class="product-card__button button" type="button">Заказать</button>
+            <button class="product-card__button button button__green" type="button">Заказать</button>
           </section>
         </li>
         <li class="catalog__item">
@@ -152,7 +154,7 @@
                 <dd class="product-card__definition-price">Цена</dd>
               </dl>
             </a>
-            <button class="product-card__button button" type="button">Заказать</button>
+            <button class="product-card__button button button__green" type="button">Заказать</button>
           </section>
         </li>
         <li class="catalog__item show-more">
@@ -162,7 +164,7 @@
               <h3 class="product-card__title show-more__text">Показать еще 100500 товаров</h3>
               <span class="show-more__text-additional">На самом деле вкусов гораздо больше!</span>
             </a>
-            <button class="button product-card__button show-more__button" type="button">Показать все</button>
+            <button class="product-card__button button button__gray show-more__button" type="button">Показать все</button>
           </section>
         </li>
       </ul>
@@ -177,7 +179,7 @@
               <dt class="additional-product__term">200 Р.</dt>
               <dd class="additional-product__definition">1 упаковка (100 г)</dd>
             </dl>
-            <button class="additional-product__button button" type="button">Заказать</button>
+            <button class="additional-product__button button button__green" type="button">Заказать</button>
           </li>
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__name">Питьевая вода</h3>
@@ -185,7 +187,7 @@
               <dt class="additional-product__term">50 Р.</dt>
               <dd class="additional-product__definition">5 литров</dd>
             </dl>
-            <button class="additional-product__button button" type="button">Заказать</button>
+            <button class="additional-product__button button button__green" type="button">Заказать</button>
           </li>
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__name">Молоко</h3>
@@ -193,7 +195,7 @@
               <dt class="additional-product__term">100 Р.</dt>
               <dd class="additional-product__definition">1 литр</dd>
             </dl>
-            <button class="additional-product__button button" type="button">Заказать</button>
+            <button class="additional-product__button button button__green" type="button">Заказать</button>
           </li>
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__name">Витамины</h3>
@@ -201,7 +203,7 @@
               <dt class="additional-product__term">300 Р.</dt>
               <dd class="additional-product__definition">1 упаковка (30 г)</dd>
             </dl>
-            <button class="additional-product__button button" type="button">Заказать</button>
+            <button class="additional-product__button button button__green" type="button">Заказать</button>
           </li>
         </ul>
       </section>
@@ -214,16 +216,23 @@
     </div>
   </main>
   <footer class="footer">
-    <div class="footer__invitation invitation">
+    <div class="footer__invitation invitation container">
       <strong class="invitation__slogan">Приглашаем <br>к сотрудничеству дилеров!</strong>
       <address class="invitation__address">
             ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
       </address>
     </div>
+    <iframe
+    class="invitation__map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+    width="320"
+    height="400"
+    allowfullscreen
+    title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"
+  ></iframe>
       <!-- <img class="footer__map" src="./img/footer-map.jpg" alt="Адрес магазина на карте." width="320" height="362"> -->
-    </div>
-    <div class="footer__wrapper container">
-      <div class="footer__container">
+    <div class="footer__wrapper">
+      <div class="footer__container container">
         <img class="footer__logo" src="img/footer-logo.svg" width="128" height="24" alt="Логотип магазина Кэт энерджи.">
         <div class="footer__social social">
           <ul class="social__list">

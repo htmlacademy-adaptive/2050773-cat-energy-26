@@ -1,14 +1,17 @@
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 87%;
+  margin: 0 auto;
+  max-width: 320px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 92%;
+    margin: 0 auto;
+    max-width: @tablet-width;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 110px;
-    padding-right: 110px;
+    width: 85%;
+    margin: 0 auto;
+    max-width: @desktop-width;
   }
 }

@@ -1,22 +1,15 @@
 .invitation {
   display: flex;
   justify-content: space-between;
-  padding: 26px 20px;
-
-  @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+  padding-top: 26px;
+  padding-bottom: 26px;
 
   @media (min-width: @desktop-width) {
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-
-  @media (min-width: @desktop-width) {
+    position: absolute;
+    background-color: #ffffff;
     width: 565px;
     padding: 60px 80px;
-    margin-left: 110px;
+    z-index: 10;
   }
 
   &__slogan {
@@ -33,5 +26,20 @@
     font-style: normal;
     text-align: left;
     max-width: 139px;
+
+    @media (min-width: @tablet-width) {
+      max-width: 159px;
+    }
+  }
+
+  &__map {
+    position: relative;
+    display: block;
+    border: none;
+    width: 100%;
+
+    @media (min-width: @tablet-width) {
+      height: 400;
+    }
   }
 }

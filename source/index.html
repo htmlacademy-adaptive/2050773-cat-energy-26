@@ -13,34 +13,36 @@
         <a class="main-header__logo">
           <img src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
         </a>
-        <button class="main-header__toggle" type="button">
+      </div>
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-      </div>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Магазин Cat Energy</h1>
     <section class="main-product">
-      <div class="main-product__wrapper">
-        <h2 class="main-product__title heading">Функциональное питание для котов</h2>
+      <div class="container main-product__wrapper">
+        <h2 class="main-product__title heading">Функциональное<br> питание для котов</h2>
         <p class="main-product__commercial-slogan">Занялся собой? Займись котом!</p>
-      </div>
-      <button class="main-product__button button" type="button">Подобрать программу</button>
+        <button class=" main-product__button button button__green" type="button">Подобрать программу</button>
     </section>
+      </div>
     <section class="product-options container">
       <h2 class="visually-hidden">Похудение и набор массы</h2>
       <ul class="product-options__list">
@@ -89,27 +91,29 @@
       </div>
     </section>
     <section class="example">
-      <h2 class="example__title heading container">Живой пример</h2>
-      <div class="example__container container">
-        <div class="example__text-container">
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой
-                обычный корм на Cat Energy Slim. Отличный результат
-                без изнуряющих тренировок! При этом он не менял своих
-                привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="example__list-wrapper">
-            <dl class="example__list">
-              <div class="example__wrapper">
-                <dt class="example__term">5 кг</dt>
-                <dd class="example__description">снижение веса</dd>
+      <h2 class="example__title heading container example__title--desktop">Живой пример</h2>
+      <div class="example__container">
+        <div class="container">
+          <div class="example__text-container">
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой
+                  обычный корм на Cat Energy Slim. Отличный результат
+                  без изнуряющих тренировок! При этом он не менял своих
+                  привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__list-wrapper">
+              <dl class="example__list">
+                <div class="example__wrapper">
+                  <dt class="example__term">5 кг</dt>
+                  <dd class="example__description">снижение<br> веса</dd>
+                </div>
+                <div class="example__wrapper">
+                  <dt class="example__term">60 дней</dt>
+                  <dd class="example__description">затрачено<br> времени</dd>
+                </div>
+              </dl>
+              <div class="example__all-costs">
+                <span class="example__all-costs-term">затраты на питание:</span>
+                <span class="example__all-costs-term">15 000 руб.</span>
               </div>
-              <div class="example__wrapper">
-                <dt class="example__term">60 дней</dt>
-                <dd class="example__description">затрачено времени</dd>
-              </div>
-            </dl>
-            <div class="example__all-costs">
-              <span class="example__all-costs-term">затраты на питание:</span>
-              <span class="example__all-costs-term">15 000 руб.</span>
             </div>
           </div>
         </div>
@@ -118,15 +122,25 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="footer__invitation invitation">
-      <strong class="invitation__slogan">Приглашаем <br>к сотрудничеству дилеров!</strong>
-      <address class="invitation__address">
-            ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
-      </address>
+    <div class="container">
+      <div class="footer__invitation invitation">
+        <strong class="invitation__slogan">Приглашаем <br>к сотрудничеству дилеров!</strong>
+        <address class="invitation__address">
+              ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
+        </address>
+      </div>
     </div>
+    <iframe
+    class="invitation__map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+    width="320"
+    height="400"
+    allowfullscreen
+    title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"
+  ></iframe>
       <!-- <img class="footer__map" src="./img/footer-map.jpg" alt="Адрес магазина на карте." width="320" height="362"> -->
-    <div class="footer__wrapper container">
-      <div class="footer__container">
+    <div class="footer__wrapper">
+      <div class="footer__container container">
         <img class="footer__logo" src="img/footer-logo.svg" width="128" height="24" alt="Логотип магазина Кэт энерджи.">
         <div class="footer__social social">
           <ul class="social__list">
