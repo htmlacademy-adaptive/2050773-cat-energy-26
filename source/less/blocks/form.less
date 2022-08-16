@@ -1,4 +1,10 @@
 .form {
+  padding-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 72px;
+  }
+
   &__fieldset {
     border: none;
     display: flex;
@@ -18,21 +24,45 @@
     margin: 0;
     margin-bottom: 35px;
     padding: 0;
+
+    @media (min-width: @tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   &__field {
     display: flex;
-    margin-bottom: 14px;
+    align-items: center;
+    gap: 12px;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
   }
 
   &__field-control {
     flex-grow: 1;
+    border: solid 1px #e7e7e7;
+    text-transform: uppercase;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    padding-left: 15px;
   }
 
   &__legend {
     font-family: "Arial", sans-serif;
     line-height: 16px;
+    font-size: 14px;
     text-align: center;
+    margin: 0;
+    margin-top: 21px;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+      margin: 0;
+      margin-left: 61px;
+    }
   }
 
   &__wrapper {
@@ -40,6 +70,26 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    @media (min-width: @tablet-width) {
+      width: 282px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 568px;
+    }
+  }
+
+  &__button-wrapper {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
     }
   }
 }

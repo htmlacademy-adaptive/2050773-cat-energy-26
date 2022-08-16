@@ -14,7 +14,7 @@
           <img src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
         </a>
       </div>
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -35,12 +35,12 @@
     </div>
   </header>
   <main class="main-container">
-    <div class="form-section container">
-      <h1 class="form-section__title">Подбор программы</h1>
+    <div class="form-section container container--padding">
+      <h1 class="form-section__title heading">Подбор программы</h1>
       <p class="form-section__text">Заполните анкету, и мы подберем<br>
           программу питания для вашего кота</p>
     </div>
-    <form class="form order-form container" action="https://echo.htmlacademy.ru/" method="post">
+    <form class="form order-form container container--padding" action="https://echo.htmlacademy.ru/" method="post">
       <div class="form__wrapper">
         <fieldset class="form__fieldset form-recipient">
           <legend class="visually-hidden">Данные кота</legend>
@@ -54,7 +54,7 @@
           </label>
           <label class="form__field order-form__field" for="recipient-age">
             <span class="form__field-label">Возраст (лет):</span>
-            <input class="form__field-control input" type="number" id="recipient-age" name="form-recipient-age">
+            <input class="form__field-control input" type="number" id="recipient-age" name="form-recipient-age" value="7">
           </label>
         </fieldset>
         <fieldset class="form__fieldset form-result result-form">
@@ -95,13 +95,13 @@
         </div>
       </fieldset>
       <fieldset class="form__fieldset form-comment">
-        <legend class="form-comment__title">Комментарий</legend>
+        <legend class="form__title form-comment__title">Комментарий</legend>
         <label class="form__field order-form__field" for="owner-comment">
           <textarea class="form__field-control form-comment__textarea input" id="owner-comment" name="form-owner-comment"  placeholder="Расскажите обо всех повадках кота"></textarea>
         </label>
       </fieldset>
       <fieldset class="form__fieldset additional-form">
-        <legend class="additional-form__title">Дополнительно</legend>
+        <legend class="form__title additional-form__title">Дополнительно</legend>
         <ul class="additional-form__list">
           <li class="additional-form__item">
             <label class="form__field additional-form__field order-form__field">
@@ -129,18 +129,20 @@
           </li>
         </ul>
       </fieldset>
-      <button class="form__button button button__green" type="submit">Отправить заявку</button>
+      <div class="form__button-wrapper">
+        <button class="form__button button button__green" type="submit">Отправить заявку</button>
+        <p class="form__legend">* — Обязательные поля</p>
+      </div>
     </form>
-    <p class="form__legend">
-      <small>* — Обязательные поля</small>
-    </p>
   </main>
-  <footer class="footer">
-    <div class="footer__invitation invitation container">
-      <strong class="invitation__slogan">Приглашаем <br>к сотрудничеству дилеров!</strong>
-      <address class="invitation__address">
-            ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
-      </address>
+  <footer class="footer footer__colored">
+    <div class="container">
+      <div class="footer__invitation invitation">
+        <strong class="invitation__slogan">Приглашаем <br>к сотрудничеству дилеров!</strong>
+        <address class="invitation__address">
+              ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
+        </address>
+      </div>
     </div>
     <iframe
     class="invitation__map"
