@@ -1,9 +1,27 @@
 .special-offer {
-  margin-top: 30px;
   position: relative;
+  margin-top: 55px;
   background-color: rgba(104, 183, 56, 0.85);
   height: 289px;
   display: flex;
+
+  @media (min-width: @desktop-width) {
+    width: 17%; //245:1440
+    height: 289px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: " ";
+      min-width: 320px;
+      width: 100%;
+      height: 1px;
+      background-color: #ebebeb;
+      top: -35px;
+      left: -20px;
+    }
+  }
 
   &__text {
     font-family: "Arial", sans-serif;
