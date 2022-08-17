@@ -2,8 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 22px;
-  padding-bottom: 22px;
+
+  @media (max-width: @mobile-width-only) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
 
   &__text {
     font-family: "Arial", sans-serif;
@@ -16,5 +19,15 @@
 @media (min-width: @tablet-width) {
   .copyright__text {
     margin-right: 22px;
+  }
+
+  &__link:hover svg {
+    fill: #68b738;
+  }
+
+
+  &__link:active svg {
+    fill: #68b738;
+    opacity: 0.3;
   }
 }

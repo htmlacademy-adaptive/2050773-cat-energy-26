@@ -2,20 +2,23 @@
   &__wrapper {
     padding-top: 20px;
     padding-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 30px;
+    }
   }
 
   &__title {
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
 
     @media (min-width: @tablet-width) {
-      margin-top: 45px;
-      margin-bottom: 183px;
+      margin-bottom: 72px;
     }
 
-    @media (min-width: @desktop-width) {
-      margin-top: 71px;
-    }
+    // @media (min-width: @desktop-width) {
+    //   margin-top: 71px;
+    // }
   }
 
   &__list {
@@ -24,11 +27,12 @@
     list-style-type: none;
     color: #444444;
     font-family: "Arial", sans-serif;
+    // background-color: tomato;
 
     @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 245px 182px;
+      gap: 134px 182px;
     }
 
     @media (min-width: @desktop-width) {
@@ -49,6 +53,10 @@
       padding-left: 80px;
     }
 
+    @media (min-width: @tablet-width) {
+      padding-top: 111px;
+    }
+
     &::before {
       position: absolute;
       content: " ";
@@ -61,7 +69,7 @@
       @media (min-width: @tablet-width) {
         width: 80px;
         height: 80px;
-        top: -110px;
+        top: 0;
       }
     }
 
@@ -73,24 +81,40 @@
       background-image: url("../img/icons/leaf.svg");
       background-repeat: no-repeat;
       background-position: 15px center;
+
+      @media (min-width: @tablet-width) {
+        background-position: 25px 25px;
+      }
     }
 
     &--boil {
       background-image: url("../img/icons/boil.svg");
       background-repeat: no-repeat;
       background-position: 15px center;
+
+      @media (min-width: @tablet-width) {
+        background-position: 25px 25px;
+      }
     }
 
     &--food {
       background-image: url("../img/icons/eat.svg");
       background-repeat: no-repeat;
       background-position: 15px center;
+
+      @media (min-width: @tablet-width) {
+        background-position: 25px 25px;
+      }
     }
 
     &--results {
       background-image: url("../img/icons/watches.svg");
       background-repeat: no-repeat;
       background-position: 15px center;
+
+      @media (min-width: @tablet-width) {
+        background-position: 25px 25px;
+      }
     }
   }
 }

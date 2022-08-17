@@ -1,7 +1,14 @@
 .social {
-  padding-top: 23px;
-  padding-bottom: 23px;
   text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    border-top: solid 1px #d9d9d9;
+    border-bottom: solid 1px #d9d9d9;
+    margin-top: 32px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
 
   &__list {
     margin: 0;
@@ -18,5 +25,15 @@
 
   &__link--youtube {
     margin-right: 30px;
+  }
+
+  &__link:hover svg {
+    fill: #68b738;
+  }
+
+
+  &__link:active svg {
+    fill: #68b738;
+    opacity: 0.3;
   }
 }
