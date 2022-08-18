@@ -12,43 +12,58 @@
     padding: 60px 80px;
     z-index: 10;
   }
+}
 
-  &__slogan {
+.invitation__slogan {
+  text-transform: uppercase;
+  color: #111111;
+  font-style: normal;
+
+  @media (max-width: @mobile-width-only) {
     font-size: 16px;
     line-height: 20px;
-    text-transform: uppercase;
-    color: #111111;
-    font-style: normal;
-
-    @media (min-width: @tablet-width) {
-      font-size: 20px;
-      line-height: 26px;
-    }
   }
 
-  &__address {
-    font-family: "Arial", sans-serif;
-    line-height: 20px;
-    font-style: normal;
-    text-align: left;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.invitation__address {
+  font-family: "Arial", sans-serif;
+  line-height: 20px;
+  font-style: normal;
+  text-align: left;
+  color: #444444;
+  text-align: end;
+
+  @media (max-width: @mobile-width-only) {
     max-width: 139px;
-    color: #444444;
+  }
 
-    @media (min-width: @tablet-width) {
-      max-width: 159px;
-      font-size: 16px;
-      line-height: 20px;
+  @media (min-width: @tablet-width) {
+    max-width: 159px;
+    font-size: 16px;
+
+    &--street {
+      display:flex;
+      padding-bottom: 20px;
     }
   }
 
-  &__map {
-    position: relative;
-    display: block;
-    border: none;
-    width: 100%;
+  @media (min-width: @desktop-width) {
+    text-align: start;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      height: 400;
-    }
+.invitation__map {
+  position: relative;
+  display: block;
+  border: none;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 400;
   }
 }

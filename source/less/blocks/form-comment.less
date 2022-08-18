@@ -1,21 +1,23 @@
 .form-comment {
-  margin-top: 23px;
+  @media (max-width: @mobile-width-only) {
+    margin-top: 23px;
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: 65px;
   }
+}
 
-  &__title {
+.form-comment__title {
     margin-bottom: 37px;
-  }
+}
 
-  &__textarea {
-    height: 150px;
-    width: 100%;
-    color: #444444;
-    font-size: 16px;
-    line-height: 18px;
-    font-family: inherit;
-    font-weight: inherit;
-  }
+.form-comment__textarea {
+  height: 150px;
+  width: 100%;
+  color: #444444;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: inherit;
+  font-weight: inherit;
 }

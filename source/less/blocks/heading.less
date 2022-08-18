@@ -1,10 +1,13 @@
 .heading {
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: inherit;
+  @media (max-width: @mobile-width-only) {
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: inherit;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    font-weight: inherit;
   }
 }

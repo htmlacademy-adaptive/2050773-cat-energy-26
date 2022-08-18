@@ -1,12 +1,12 @@
 .main-header {
   padding-top: 10px;
   padding-bottom: 17px;
+}
 
-  &__logo {
-    position: relative;
-  }
+.main-header__logo {
+  position: relative;
 
-  &__logo::after {
+  &::after {
     position: absolute;
     content: " ";
     background-image: url("../img/logo-title-mobile.svg");
@@ -16,16 +16,16 @@
     left: 90px;
     bottom: 12px;
   }
+}
 
-  &__logo-wrapper {
+.main-header__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header__container {
+  @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-  }
-
-  &__container {
-    @media (min-width: @tablet-width) {
-      display: flex;
-      justify-content: space-between;
-    }
   }
 }

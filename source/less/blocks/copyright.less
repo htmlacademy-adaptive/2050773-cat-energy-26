@@ -7,26 +7,25 @@
     padding-top: 22px;
     padding-bottom: 22px;
   }
+}
 
-  &__text {
-    font-family: "Arial", sans-serif;
-    font-size: 16px;
-    color: #444444;
-    font-weight: 400;
+.copyright__text {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #444444;
+  font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .copyright__text {
-    margin-right: 22px;
-  }
-
-  &__link:hover svg {
+.copyright__link {
+  &:hover svg {
     fill: #68b738;
   }
 
-
-  &__link:active svg {
+  &:active svg {
     fill: #68b738;
     opacity: 0.3;
   }

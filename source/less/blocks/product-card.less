@@ -10,123 +10,124 @@
     flex-direction: column;
     align-items: center;
   }
+}
 
-  &__button {
-    width: 100%;
+.product-card__button {
+  width: 100%;
 
-    @media (min-width: @tablet-width) {
-      width: 248px;
-      margin-top: auto;
-      margin-bottom: 40px;
-    }
-
-    @media (min-width: @desktop-width) {
-      width: 168px;
-    }
+  @media (min-width: @tablet-width) {
+    width: 248px;
+    margin-top: auto;
+    margin-bottom: 40px;
   }
 
-  &__link {
-    text-decoration: none;
-    display: grid;
-    grid-template-areas:
+  @media (min-width: @desktop-width) {
+    width: 168px;
+  }
+}
+
+.product-card__link {
+  text-decoration: none;
+  display: grid;
+  grid-template-areas:
       "image title"
       "image list";
     // grid-template-columns: auto 138px;
 
-    @media (min-width: @tablet-width) {
-      grid-template-areas: "image"
-                            "title"
-                            "list";
-      grid-template-columns: 247px;
-    }
+  @media (min-width: @tablet-width) {
+    grid-template-areas:
+                "image"
+                "title"
+                "list";
+    grid-template-columns: 247px;
+  }
 
     @media (min-width: @desktop-width) {
       grid-template-columns: 170px;
     }
   }
 
-  &__image {
-    grid-area: image;
-    display: block;
-    justify-self: center;
-    align-self: center;
+.product-card__image {
+  grid-area: image;
+  display: block;
+  justify-self: center;
+  align-self: center;
+}
+
+.product-card__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: inherit;
+  text-transform: uppercase;
+  color: #000000;
+  grid-area: title;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
   }
+}
 
-  &__title {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: inherit;
-    text-transform: uppercase;
-    color: #000000;
-    grid-area: title;
-    margin: 0;
-    padding: 0;
-
-    @media (min-width: @tablet-width) {
-      font-size: 20px;
-      line-height: 24px;
-      text-align: center;
-    }
-  }
-
-  &__list {
-    margin: 0;
-    margin-bottom: 22px;
-    padding: 0;
-    padding-top: 14px;
-    list-style-type: none;
-    font-family: "Arial", sans-serif;
-    font-size: 12px;
-    line-height: 16px;
-    color: #444444;
-    grid-area: list;
-    display: grid;
-    grid-template-areas:
+.product-card__list {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+  padding-top: 14px;
+  list-style-type: none;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+  grid-area: list;
+  display: grid;
+  grid-template-areas:
       "weight w_amount"
       "taste t_amount"
       "price p_amount";
 
-    @media (min-width: @tablet-width) {
-        font-size: 16px;
-        padding-bottom: 9px;
-    }
-  }
-
-  &__item {
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
+      font-size: 16px;
       padding-bottom: 9px;
-      padding-top: 17px;
-      border-bottom: solid 1px #cdcdcd;
-    }
   }
+}
 
-  &__term-weight {
-    grid-area: w_amount;
-    text-align: right;
+.product-card__item {
+  @media (min-width: @tablet-width) {
+     padding-bottom: 9px;
+    padding-top: 17px;
+    border-bottom: solid 1px #cdcdcd;
   }
+}
 
-  &__definition-weight {
-    grid-area: weight;
-    margin: 0;
-  }
+.product-card__term-weight {
+  grid-area: w_amount;
+  text-align: right;
+}
 
-  &__term-taste {
-    grid-area: t_amount;
-    text-align: right;
-  }
+.product-card__definition-weight {
+  grid-area: weight;
+  margin: 0;
+}
 
-  &__definition-taste {
-    grid-area: taste;
-    margin: 0;
-  }
+.product-card__term-taste {
+  grid-area: t_amount;
+  text-align: right;
+}
 
-  &__term-price {
-    grid-area: p_amount;
-    text-align: right;
-  }
+.product-card__definition-taste {
+  grid-area: taste;
+  margin: 0;
+}
 
-  &__definition-price {
-    grid-area: price;
-    margin: 0;
-  }
+.product-card__term-price {
+  grid-area: p_amount;
+  text-align: right;
+}
+
+.product-card__definition-price {
+  grid-area: price;
+  margin: 0;
 }
