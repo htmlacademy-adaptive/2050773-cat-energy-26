@@ -5,9 +5,14 @@
   height: 289px;
   display: flex;
 
+  @media (max-width: @mobile-width-only) {
+    justify-content: center;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 17%; //245:1440
+    width: 20%; //245:1440
     height: 289px;
+    justify-content: center;
   }
 
   @media (max-width: @mobile-width-only) {
@@ -26,6 +31,7 @@
 
 .special-offer__text {
   font-family: "Arial", sans-serif;
+  font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: #ffffff;
