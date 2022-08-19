@@ -51,8 +51,16 @@
 .input[type="checkbox"]:checked + .input__mark--checkbox::before {
   position: absolute;
   content: url("../img/icons/green-tick--mobile.svg");
-  top: 5px;
-  left: 3px;
   width: 10px;
   height: 10px;
+
+  @media (max-width: @mobile-width-only) {
+    top: 5px;
+    left: 3px;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 5px;
+  }
 }

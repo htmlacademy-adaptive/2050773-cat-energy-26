@@ -42,10 +42,10 @@
     grid-template-columns: 247px;
   }
 
-    @media (min-width: @desktop-width) {
-      grid-template-columns: 170px;
-    }
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 170px;
   }
+}
 
 .product-card__image {
   grid-area: image;
@@ -82,52 +82,22 @@
   line-height: 16px;
   color: #444444;
   grid-area: list;
-  display: grid;
-  grid-template-areas:
-      "weight w_amount"
-      "taste t_amount"
-      "price p_amount";
 
   @media (min-width: @tablet-width) {
-      font-size: 16px;
-      padding-bottom: 9px;
+    font-size: 16px;
+    padding-bottom: 9px;
   }
+}
+
+.product-card__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #cdcdcd;
 }
 
 .product-card__item {
   @media (min-width: @tablet-width) {
-     padding-bottom: 9px;
+    padding-bottom: 9px;
     padding-top: 17px;
-    border-bottom: solid 1px #cdcdcd;
   }
-}
-
-.product-card__term-weight {
-  grid-area: w_amount;
-  text-align: right;
-}
-
-.product-card__definition-weight {
-  grid-area: weight;
-  margin: 0;
-}
-
-.product-card__term-taste {
-  grid-area: t_amount;
-  text-align: right;
-}
-
-.product-card__definition-taste {
-  grid-area: taste;
-  margin: 0;
-}
-
-.product-card__term-price {
-  grid-area: p_amount;
-  text-align: right;
-}
-
-.product-card__definition-price {
-  grid-area: price;
-  margin: 0;
 }

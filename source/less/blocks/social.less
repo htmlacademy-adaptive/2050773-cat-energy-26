@@ -17,23 +17,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.social__link {
+  & svg {
+    fill: #666666;
   }
 
-  .social__link {
-    &--vkontakte {
-      margin-right: 26px;
-    }
-
-    &--youtube {
-      margin-right: 30px;
-    }
-
-    &:hover svg {
-      fill: #68b738;
-    }
-
-    &:active svg {
-      fill: #68b738;
-      opacity: 0.3;
-    }
+  &--vkontakte {
+    margin-right: 26px;
   }
+
+  &--youtube {
+    margin-right: 30px;
+  }
+
+  &:hover svg {
+    fill: #68b738;
+  }
+
+  &:active svg {
+    fill: #68b738;
+    opacity: 0.3;
+  }
+}
