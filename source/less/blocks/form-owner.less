@@ -1,23 +1,10 @@
 .form-owner {
   position: relative;
+  overflow-x: hidden;
   margin-top: 26px;
 
   @media (min-width: @tablet-width) {
     margin-top: 70px;
-  }
-
-  &::before {
-    content: " ";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: -45px;
-    background-color: #68b738;
-    z-index: -1;
-
-    @media (min-width: @tablet-width) {
-      top: -95px;
-    }
   }
 }
 
@@ -36,11 +23,60 @@
 }
 
 .form-owner__title {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
   @media (max-width: @mobile-width-only) {
-    padding-bottom: 35px;
+    padding-left: 6.25%;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-left: 8%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 7.3%;
+  }
+
+  & span {
+    background-color: #ffffff;
+    display: inline-block;
+
+    @media (max-width: @mobile-width-only) {
+      padding: 0 20px;
+      margin-left: -20px;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 0 40px;
+      margin-left: -40px;
+    }
+  }
+
+  & br {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 1000%;
+    height: 2px;
+    top: 30%;
+    left: -110px;
+    background-color: #68b738;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: 50%;
+    }
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 76px;
+    margin-bottom: 57px;
   }
 }

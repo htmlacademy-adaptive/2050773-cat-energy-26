@@ -9,18 +9,56 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 75px;
-    width: 73.3%;
   }
 }
 
 .additional-products__title {
   position: relative;
-  font-size: 24px;
-  line-height: 24px;
-  margin: 0;
-  margin-bottom: 36px;
-  padding: 0;
+  // font-size: 24px;
+  // line-height: 24px;
+  // margin: 0;
+  // margin-bottom: 36px;
+  // padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 
+  @media (max-width: @mobile-width-only) {
+    padding-left: 6.25%;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-left: 8%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 7.3%;
+  }
+
+  & span {
+    background-color: #ffffff;
+    display: inline-block;
+
+    @media (max-width: @mobile-width-only) {
+      padding: 0 20px;
+      margin-left: -20px;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 0 40px;
+      margin-left: -40px;
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 1000%;
+    height: 2px;
+    top: 50%;
+    left: -110px;
+    background-color: #68b738;
+    z-index: -1;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;

@@ -1,20 +1,4 @@
 .additional-form {
-  position: relative;
-
-  &::before {
-    content: " ";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    top: -45px;
-    background-color: #68b738;
-    z-index: -1;
-
-    @media (min-width: @tablet-width) {
-      top: -75px;
-    }
-  }
-
   @media (max-width: 767px) {
     margin-top: 23px;
   }
@@ -25,6 +9,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin-top: 67px;
     margin-bottom: 60px;
   }
 }
@@ -40,10 +25,54 @@
 }
 
 .additional-form__title {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 6.25%;
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-left: 8%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 7.3%;
+  }
+
+  & span {
+    background-color: #ffffff;
+    display: inline-block;
+
+    @media (max-width: @mobile-width-only) {
+      padding: 0 20px;
+      margin-left: -20px;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 0 40px;
+      margin-left: -40px;
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 1000%;
+    height: 2px;
+    top: 50%;
+    left: -110px;
+    background-color: #68b738;
+    z-index: -1;
+  }
+
   @media (min-width: @tablet-width) {
-    padding-bottom: 57px;
+    margin-bottom: 57px;
   }
 }
+
 
 .additional-form__list {
   margin: 0;

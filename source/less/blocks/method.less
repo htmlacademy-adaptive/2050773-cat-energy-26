@@ -6,7 +6,7 @@
 
   @media (min-width: @tablet-width) and (max-width: 1449px) {
     padding-top: 45px;
-    padding-bottom: 47px;
+    padding-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -83,13 +83,16 @@
     }
   }
 
-  &::after {
+  &--nutrition::after {
     position: absolute;
     content: " ";
     width: 60px;
     height: 60px;
     background-color: #68b738;
     z-index: -1;
+    background-image: url("../img/icons/leaf.svg");
+    background-repeat: no-repeat;
+    background-position: 20px center;
 
     @media (max-width: @mobile-width-only) {
       top: 0;
@@ -101,42 +104,88 @@
       height: 80px;
       top: 0;
     }
-  }
 
-  &--nutrition {
-    background-image: url("../img/icons/leaf.svg");
-    background-repeat: no-repeat;
-    background-position: 15px center;
 
     @media (min-width: @tablet-width) {
       background-position: 25px 25px;
     }
   }
 
-  &--boil {
+  &--boil::after {
+    position: absolute;
+    content: " ";
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    z-index: -1;
     background-image: url("../img/icons/boil.svg");
     background-repeat: no-repeat;
     background-position: 15px center;
 
+    @media (max-width: @mobile-width-only) {
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 0;
+    }
+
     @media (min-width: @tablet-width) {
       background-position: 25px 25px;
     }
   }
 
-  &--food {
+  &--food::after {
+    position: absolute;
+    content: " ";
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    z-index: -1;
     background-image: url("../img/icons/eat.svg");
     background-repeat: no-repeat;
     background-position: 15px center;
 
+    @media (max-width: @mobile-width-only) {
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 0;
+    }
+
     @media (min-width: @tablet-width) {
       background-position: 25px 25px;
     }
   }
 
-  &--results {
+  &--results::after {
+    position: absolute;
+    content: " ";
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    z-index: -1;
     background-image: url("../img/icons/watches.svg");
     background-repeat: no-repeat;
     background-position: 15px center;
+
+    @media (max-width: @mobile-width-only) {
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 0;
+    }
 
     @media (min-width: @tablet-width) {
       background-position: 25px 25px;
