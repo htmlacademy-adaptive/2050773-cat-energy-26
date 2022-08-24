@@ -1,8 +1,4 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   @media (max-width: @mobile-width-only) {
     padding-top: 22px;
     padding-bottom: 22px;
@@ -22,6 +18,10 @@
 
 .copyright__link {
   text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 
   & svg {
     fill: #666666;
@@ -40,6 +40,4 @@
   &:active b {
     opacity: 0.3;
   }
-
-
 }

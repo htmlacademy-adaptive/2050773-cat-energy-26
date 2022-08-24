@@ -51,7 +51,7 @@
 }
 
 .method__description {
-    margin: 0;
+  margin: 0;
 }
 
 .method__item {
@@ -60,7 +60,11 @@
 
   @media (max-width: @mobile-width-only) {
     padding-left: 80px;
-    height: 60px;
+    min-height: 60px;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -75,8 +79,7 @@
       right: 30px;
       top: -40px;
       z-index: -1;
-      font-family: Oswald, sans-serif;
-
+      font-family: "Oswald", sans-serif;
     }
   }
 
@@ -98,10 +101,6 @@
       height: 80px;
       top: 0;
     }
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 26px;
   }
 
   &--nutrition {

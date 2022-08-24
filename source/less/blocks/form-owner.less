@@ -1,12 +1,29 @@
 .form-owner {
+  position: relative;
+  margin-top: 26px;
+
   @media (min-width: @tablet-width) {
     margin-top: 70px;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: -45px;
+    background-color: #68b738;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: -95px;
+    }
   }
 }
 
 .form-owner__wrapper {
   @media (min-width: @desktop-width) {
-     display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -15,5 +32,15 @@
 .form-owner__control {
   @media (min-width: @desktop-width) {
     width: 486px;
+  }
+}
+
+.form-owner__title {
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 76px;
   }
 }
