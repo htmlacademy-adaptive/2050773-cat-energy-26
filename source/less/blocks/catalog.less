@@ -1,31 +1,104 @@
-.catalog {
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: 280px;
-    align-items: end;
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  // grid-template-columns: 280px;
+  align-items: end;
 
-    @media (min-width: @tablet-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 141px 60px;
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    grid-template-columns: 45.7% 45.7%;
+    gap: 141px 8.5%;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 20% 20% 20% 20%;
+    gap: 143px 6.5%;
+  }
+}
+
+.catalog__container {
+  padding-bottom: 35px;
+
+  & span {
+    background-color: #ffffff;
+    padding: 0 40px;
+    margin-left: -40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 86px;
+  }
+}
+
+.catalog__item {
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: " ";
+      min-width: 320px;
+      width: 100%;
+      height: 1px;
+      background-color: #ebebeb;
+      top: 0;
+      left: -20px;
     }
 
-    @media (min-width: @desktop-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 141px 80px;
+    &:not(:last-child) {
+      padding-top: 20px;
+    }
+  }
+}
+
+.catalog__title {
+  margin: 0;
+  position: relative;
+  padding-top: 27px;
+  padding-bottom: 41px;
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: " ";
+      min-width: 320px;
+      width: 100%;
+      height: 1px;
+      background-color: #ebebeb;
+      top: 0;
+      left: -20px;
     }
   }
 
-  &__container {
-    @media (min-width: @desktop-width) {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      max-width: @desktop-width;
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-top: 48px;
+    margin-bottom: 163px;
+  }
+}
+
+.catalog__line {
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 40px;
+    background-color: #68b738;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: 95px;
     }
   }
 }

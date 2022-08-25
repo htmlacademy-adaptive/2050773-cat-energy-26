@@ -1,32 +1,104 @@
 .additional-form {
-  &__title {
-    margin: 0;
-    padding: 0;
-    color: #000000;
-    font-size: 24px;
-    line-height: 26px;
+  @media (max-width: 767px) {
+    margin-top: 23px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    margin-top: 65px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 67px;
+    margin-bottom: 60px;
+  }
+}
+
+.additional-form__item {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    margin-bottom: 32px;
+  }
+}
+
+.additional-form__title {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 6.25%;
     margin-bottom: 34px;
   }
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    margin-bottom: 34px;
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-left: 8%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 7.3%;
+  }
+
+  & span {
+    background-color: #ffffff;
+    display: inline-block;
+
+    @media (max-width: @mobile-width-only) {
+      padding: 0 20px;
+      margin-left: -20px;
+    }
 
     @media (min-width: @tablet-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @media (min-width: @desktop-width) {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      padding: 0 40px;
+      margin-left: -40px;
     }
   }
 
-  &__field-label {
-    color: #000000;
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 1000%;
+    height: 2px;
+    top: 50%;
+    left: -110px;
+    background-color: #68b738;
+    z-index: -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
+}
+
+
+.additional-form__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr 1fr;
+  }
+}
+
+.additional-form__field-label {
+  color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

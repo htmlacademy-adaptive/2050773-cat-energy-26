@@ -1,45 +1,133 @@
 .form {
-  &__fieldset {
-    border: none;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 32px;
   }
 
-  &__field-label {
-    text-transform: uppercase;
-    color: #444444;
+  @media (min-width: @tablet-width) {
+    padding-bottom: 72px;
+  }
+}
+
+.form__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.form__field-label {
+  text-transform: uppercase;
+  color: #444444;
+  font-size: 16px;
+  font-weight: 18px;
+}
+
+.form__title {
+  margin: 0;
+  padding: 0;
+
+
+  & span {
+    background-color: #ffffff;
+    display: inline-block;
+
+    @media (max-width: @mobile-width-only) {
+      padding: 0 20px;
+      margin-left: -20px;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 0 40px;
+      margin-left: -40px;
+    }
   }
 
-  &__title {
+  @media (max-width: @mobile-width-only) {
     font-size: 24px;
     line-height: 26px;
-    margin: 0;
-    margin-bottom: 35px;
-    padding: 0;
+    padding-bottom: 35px;
   }
 
-  &__field {
-    display: flex;
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 75px;
+  }
+}
+
+.form__field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &:not(:last-child) {
     margin-bottom: 14px;
   }
+}
 
-  &__field-control {
-    flex-grow: 1;
+.form__field-control {
+  flex-grow: 1;
+  border: solid 1px #e7e7e7;
+  text-transform: uppercase;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-left: 15px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #444444;
+
+  @media (max-width: @mobile-width-only) {
+    font-size: 16px;
+    line-height: 18px;
   }
 
-  &__legend {
-    font-family: "Arial", sans-serif;
-    line-height: 16px;
-    text-align: center;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__legend {
+  font-family: "Arial", sans-serif;
+  line-height: 16px;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  margin-top: 21px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-left: 61px;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.form__button {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
   }
 
-  &__wrapper {
-    @media (min-width: @desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+  @media (min-width: @desktop-width) {
+    width: 568px;
+  }
+}
+
+.form__button-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
   }
 }

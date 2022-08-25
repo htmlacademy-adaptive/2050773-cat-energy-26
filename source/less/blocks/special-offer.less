@@ -1,18 +1,53 @@
 .special-offer {
-  margin-top: 30px;
   position: relative;
+  margin-top: 55px;
   background-color: rgba(104, 183, 56, 0.85);
   height: 289px;
   display: flex;
 
-  &__text {
-    font-family: "Arial", sans-serif;
-    line-height: 20px;
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 43px;
-    margin-top: auto;
+  @media (max-width: @mobile-width-only) {
+    justify-content: center;
   }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 20%; //245:1440
+    height: 289px;
+    justify-content: center;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: " ";
+      min-width: 320px;
+      width: 100%;
+      height: 1px;
+      background-color: #ebebeb;
+      top: -35px;
+      left: -20px;
+    }
+  }
+}
+
+.special-offer__text {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 43px;
+  margin-top: auto;
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    margin-right: 124px;
+    margin-bottom: 69px;
+    text-align: left;
+  }
+}
 
   // &::before {
   //   content: " ";
@@ -22,4 +57,4 @@
   //   background-image: url("../img/special-offer-image.png");
   //   z-index: -1;
   // }
-}
+

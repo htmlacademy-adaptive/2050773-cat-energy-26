@@ -1,73 +1,194 @@
-.method {
-  &__wrapper {
+.method__wrapper {
+  @media (max-width: @mobile-width-only) {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 53px;
   }
 
-  &__title {
-    margin: 0;
-    margin-bottom: 40px;
+  @media (min-width: @tablet-width) and (max-width: 1449px) {
+    padding-top: 45px;
+    padding-bottom: 70px;
   }
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    color: #444444;
-    font-family: "Arial", sans-serif;
-    line-height: 18px;
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+.method__title {
+  margin: 0;
+  margin-bottom: 42px;
 
-    @media (min-width: @desktop-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
   }
 
-  &__item {
+
+    // @media (min-width: @desktop-width) {
+    //   margin-top: 71px;
+    // }
+}
+
+.method__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: #444444;
+  font-family: "Arial", sans-serif;
+  counter-reset: number 0;
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 134px 182px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+.method__description {
+  margin: 0;
+}
+
+.method__item {
+  position: relative;
+  counter-increment: number 1;
+
+  @media (max-width: @mobile-width-only) {
     padding-left: 80px;
-    position: relative;
+    min-height: 60px;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
   }
 
-  &__item::before {
+  @media (min-width: @tablet-width) {
+    padding-top: 111px;
+
+    &::before {
+      position: absolute;
+      content: counter(number);
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      right: 30px;
+      top: -40px;
+      z-index: -1;
+      font-family: "Oswald", sans-serif;
+    }
+  }
+
+  &--nutrition::after {
     position: absolute;
     content: " ";
     width: 60px;
     height: 60px;
     background-color: #68b738;
-    left: 0;
     z-index: -1;
-  }
-
-  &__item:not(:last-child) {
-    margin-bottom: 26px;
-  }
-
-  &__item--nutrition {
     background-image: url("../img/icons/leaf.svg");
     background-repeat: no-repeat;
-    background-position: 15px center;
+    background-position: 20px center;
+
+    @media (max-width: @mobile-width-only) {
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 0;
+    }
+
+
+    @media (min-width: @tablet-width) {
+      background-position: 25px 25px;
+    }
   }
 
-  &__item--boil {
+  &--boil::after {
+    position: absolute;
+    content: " ";
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    z-index: -1;
     background-image: url("../img/icons/boil.svg");
     background-repeat: no-repeat;
     background-position: 15px center;
+
+    @media (max-width: @mobile-width-only) {
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-position: 25px 25px;
+    }
   }
 
-  &__item--food {
+  &--food::after {
+    position: absolute;
+    content: " ";
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    z-index: -1;
     background-image: url("../img/icons/eat.svg");
     background-repeat: no-repeat;
     background-position: 15px center;
+
+    @media (max-width: @mobile-width-only) {
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-position: 25px 25px;
+    }
   }
 
-  &__item--results {
+  &--results::after {
+    position: absolute;
+    content: " ";
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    z-index: -1;
     background-image: url("../img/icons/watches.svg");
     background-repeat: no-repeat;
     background-position: 15px center;
+
+    @media (max-width: @mobile-width-only) {
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 0;
+    }
+
+    @media (min-width: @tablet-width) {
+      background-position: 25px 25px;
+    }
   }
 }

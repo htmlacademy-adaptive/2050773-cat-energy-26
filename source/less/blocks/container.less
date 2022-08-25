@@ -1,14 +1,30 @@
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 auto;
+  // max-width: 320px;
 
-  @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
+  @media (max-width: 767px) {
+    width: 87.5%;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    width: 92.2%;
+    // max-width: @tablet-width;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 110px;
-    padding-right: 110px;
+    width: 84.7%;
+    // max-width: @desktop-width;
+  }
+
+  &--padding {
+    @media (min-width: @tablet-width) and (max-width: 1439px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

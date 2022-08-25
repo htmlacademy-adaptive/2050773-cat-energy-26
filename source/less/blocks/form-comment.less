@@ -1,13 +1,69 @@
 .form-comment {
-  &__title {
-    color: #000000;
-    font-size: 24px;
-    line-height: 26px;
-    margin-bottom: 37px;
+  @media (max-width: @mobile-width-only) {
+    margin-top: 23px;
   }
 
-  &__textarea {
-    height: 150px;
-    width: 100%;
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
   }
+}
+
+.form-comment__title {
+  margin-bottom: 37px;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 6.25%;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-left: 8%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 7.3%;
+  }
+
+  & span {
+    background-color: #ffffff;
+    display: inline-block;
+
+    @media (max-width: @mobile-width-only) {
+      padding: 0 20px;
+      margin-left: -20px;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 0 40px;
+      margin-left: -40px;
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 1000%;
+    height: 2px;
+    top: 50%;
+    left: -110px;
+    background-color: #68b738;
+    z-index: -1;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
+}
+
+
+.form-comment__textarea {
+  height: 150px;
+  width: 100%;
+  color: #444444;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: inherit;
+  font-weight: inherit;
 }

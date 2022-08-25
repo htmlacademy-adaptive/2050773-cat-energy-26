@@ -1,15 +1,82 @@
 .form-owner {
-  &__wrapper {
-    @media (min-width: @desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+  position: relative;
+  overflow-x: hidden;
+  margin-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 70px;
+  }
+}
+
+.form-owner__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.form-owner__control {
+  @media (min-width: @desktop-width) {
+    width: 486px;
+  }
+}
+
+.form-owner__title {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 6.25%;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-left: 8%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 7.3%;
+  }
+
+  & span {
+    background-color: #ffffff;
+    display: inline-block;
+
+    @media (max-width: @mobile-width-only) {
+      padding: 0 20px;
+      margin-left: -20px;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding: 0 40px;
+      margin-left: -40px;
     }
   }
 
-  &__control {
-    @media (min-width: @desktop-width) {
-      width: 486px;
+  & br {
+    @media (min-width: @tablet-width) {
+      display: none;
     }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 1000%;
+    height: 2px;
+    top: 30%;
+    left: -110px;
+    background-color: #68b738;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: 50%;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
   }
 }

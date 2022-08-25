@@ -1,37 +1,78 @@
 .invitation {
   display: flex;
   justify-content: space-between;
-  padding: 26px 20px;
 
-  @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
+  @media (max-width: @mobile-width-only) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-top: 60px;
+    padding-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-
-  @media (min-width: @desktop-width) {
+    position: absolute;
+    margin-top: 80px;
+    background-color: #ffffff;
     width: 565px;
     padding: 60px 80px;
-    margin-left: 110px;
+    z-index: 10;
   }
+}
 
-  &__slogan {
+.invitation__slogan {
+  text-transform: uppercase;
+  color: #111111;
+  font-style: normal;
+
+  @media (max-width: @mobile-width-only) {
     font-size: 16px;
     line-height: 20px;
-    text-transform: uppercase;
-    color: #111111;
-    font-style: normal;
   }
 
-  &__address {
-    font-family: "Arial", sans-serif;
-    line-height: 20px;
-    font-style: normal;
-    text-align: left;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 171px;
+  }
+}
+
+.invitation__address {
+  font-family: "Arial", sans-serif;
+  line-height: 20px;
+  font-style: normal;
+  text-align: left;
+  color: #444444;
+  text-align: end;
+
+  @media (max-width: @mobile-width-only) {
     max-width: 139px;
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 159px;
+    font-size: 16px;
+
+    &--street {
+      display:flex;
+      padding-bottom: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
+  }
+}
+
+.invitation__map {
+  position: relative;
+  display: block;
+  border: none;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 400;
   }
 }
