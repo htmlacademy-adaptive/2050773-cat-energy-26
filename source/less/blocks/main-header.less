@@ -1,6 +1,10 @@
 .main-header {
   padding-top: 25px;
   padding-bottom: 17px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 70px;
+  }
 }
 
 .main-header__logo {
@@ -39,33 +43,3 @@
     justify-content: space-between;
   }
 }
-
-// .main-header__title {
-//   background-image: url("../img/logo-title-mobile.svg");
-//   background-repeat: no-repeat;
-//   width: 101px;
-//   height: 18px;
-//   // margin-left: 60px;
-//   // margin-right: auto;
-// }
-
-
-  // &::after {
-  //   position: absolute;
-  //   content: " ";
-  //   background-image: url("../img/logo-title-mobile.svg");
-  //   background-repeat: no-repeat;
-  //   width: 101px;
-  //   height: 18px;
-  //   bottom: 12px;
-
-  //   @media (max-width: @mobile-width-only) {
-  //     left: 40%;
-  //     right: 50%;
-  //   }
-
-  //   @media (min-width: @tablet-width) {
-  //     left: 80px;
-  //   }
-  // }
-

@@ -46,13 +46,13 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">Главная</a>
+            <a class="main-nav__link main-nav__link--index main-nav__link--active">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--index" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
+            <a class="main-nav__link main-nav__link--index" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -64,10 +64,15 @@
       <div class="container main-product__wrapper">
         <h2 class="main-product__title heading">Функциональное<br> питание для котов</h2>
         <p class="main-product__commercial-slogan">Занялся собой? Займись котом!</p>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+          <img class="main-product__image" width="280" height="270" alt='' src="img/index-can-phone.png" srcset="img/index-can-phone@2x.png 2x">
+        </picture>
         <button class=" main-product__button button button__green" type="button">Подобрать программу</button>
       </div>
     </section>
-    <section class="product-options container">
+    <section class="container product-options">
       <h2 class="visually-hidden">Похудение и набор массы</h2>
       <ul class="product-options__list">
         <li class="product-options__item">
