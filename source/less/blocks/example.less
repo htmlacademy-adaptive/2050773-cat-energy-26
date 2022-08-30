@@ -122,6 +122,8 @@
 }
 
 .example__illustration {
+  position: relative;
+
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     background-color: #eaeaea;
   }
@@ -206,5 +208,32 @@
   @media (min-width: @desktop-width) {
     max-width: 450px;
     padding-bottom: 75px;
+  }
+}
+
+.example__illustration-toggle {
+  position: absolute;
+  content: " ";
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: #666666;
+  border: none;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    top: -145px;
+  }
+
+  &--button {
+    position: absolute;
+    top: 45%;
+    right: -18px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icons/thumb-example.png");
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 }
