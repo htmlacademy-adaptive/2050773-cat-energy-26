@@ -11,9 +11,10 @@
       right: 0;
       background-image:
         linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-        url(../img/index-background-mobile.png);
+        url("../img/index-background-mobile.png");
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
       z-index: -1;
     }
   }
@@ -97,6 +98,8 @@
 .main-product__image {
   @media (max-width: @mobile-width-only) {
     margin-top: 20px;
+    width: "280";
+    height: "270";
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
@@ -114,6 +117,5 @@
     height: auto;
     left: 450px;
     top: 0;
-
   }
 }

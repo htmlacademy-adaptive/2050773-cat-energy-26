@@ -3,7 +3,7 @@
   padding-bottom: 17px;
 
   @media (min-width: @desktop-width) {
-    padding-top: 70px;
+    padding-top: 56px;
   }
 }
 
@@ -22,13 +22,21 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-right: 14px;
-
     &--mobile {
       display: none;
     }
+
+    margin-right: 14px;
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
   }
 }
+
 
 .main-header__logo-wrapper {
   position: relative;
