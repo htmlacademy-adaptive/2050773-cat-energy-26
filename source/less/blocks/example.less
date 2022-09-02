@@ -1,5 +1,6 @@
 .example {
   background-color: #eaeaea;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     background-color: #ffffff;
@@ -63,7 +64,6 @@
     line-height: 12px;
     width: 87px;
     margin-top: -15px;
-
   }
 
   @media (min-width: @tablet-width) {
@@ -120,14 +120,51 @@
   }
 }
 
-  // &__illustration {
-  //   height: 232px;
-  //   background-image: url("../img/example-pic-mobile.png");
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  // }
+.example__illustration {
+  position: relative;
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    background-color: #eaeaea;
+  }
+}
+
+.example__illustration-wrapper {
+  display: flex;
+  margin: 0 auto;
+
+  @media (max-width: @mobile-width-only) {
+    width: 280px;
+    height: 256px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.example__illustration_picture {
+  height: 100%;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -150px;
+  }
+
+  &--before {
+    object-position: left;
+  }
+
+  &--after {
+    object-position: right;
+  }
+}
 
 .example__list-wrapper {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     display: flex;
     justify-content: space-between;
@@ -153,12 +190,49 @@
   @media (min-width: @desktop-width) {
     padding-top: 70px;
     background-color: #f2f2f2;
+
+    &--desktop {
+      width: 84.7%;
+      margin: 0 auto;
+      display: flex;
+    }
   }
 }
 
 .example__text-container {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-bottom: 200px;
+  }
+
   @media (min-width: @desktop-width) {
     max-width: 450px;
     padding-bottom: 75px;
+  }
+}
+
+.example__illustration-toggle {
+  position: absolute;
+  content: " ";
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: #666666;
+  border: none;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    top: -145px;
+  }
+
+  &--button {
+    position: absolute;
+    top: 45%;
+    right: -18px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icons/thumb-example.png");
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 }

@@ -27,12 +27,12 @@
 }
 
 .product-card__link {
+
   text-decoration: none;
   display: grid;
   grid-template-areas:
       "image title"
       "image list";
-    // grid-template-columns: auto 138px;
 
   @media (min-width: @tablet-width) {
     grid-template-areas:
@@ -52,6 +52,20 @@
   display: block;
   justify-self: center;
   align-self: center;
+
+  @media (min-width: @tablet-width) {
+    &--small {
+      width: 161px;
+      height: 100%;
+      margin-top: -60px;
+    }
+
+    &--big {
+      width: 168px;
+      height: 100%;
+      margin-top: -85px;
+    }
+  }
 }
 
 .product-card__title {

@@ -1,22 +1,33 @@
 .special-offer {
   position: relative;
   margin-top: 55px;
-  background-color: rgba(104, 183, 56, 0.85);
-  height: 289px;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
 
   @media (max-width: @mobile-width-only) {
     justify-content: center;
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/catalog-cat-phone.png");
+    height: 289px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     justify-content: flex-end;
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/catalog-cat-tablet.png");
+    height: 200px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 20%; //245:1440
+    width: 20%;
     height: 289px;
     justify-content: center;
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../img/catalog-cat-desktop.png");
   }
 
   @media (max-width: @mobile-width-only) {
@@ -48,13 +59,3 @@
     text-align: left;
   }
 }
-
-  // &::before {
-  //   content: " ";
-  //   position: absolute;
-  //   width: 279px;
-  //   height: 289px;
-  //   background-image: url("../img/special-offer-image.png");
-  //   z-index: -1;
-  // }
-
