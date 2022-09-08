@@ -3,7 +3,17 @@
     border-top: solid 1px #e7e7e7;
     border-bottom: solid 1px #e7e7e7;
   }
+
+  @media (min-width: @tablet-width) {
+    border: solid 1px #e7e7e7;
+    margin-top: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
+
 
 .result-form__list {
   margin: 0;
@@ -12,15 +22,17 @@
   padding-top: 28px;
   padding-bottom: 25px;
 
-
   @media (min-width: @tablet-width) {
     padding-left: 28px;
-    border: solid 1px #e7e7e7;
-    margin-top: 72px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 0;
-    width: 570px; //  570 : 1440 = 40
+    width: 570px;
+  }
+}
+
+.result-form__item {
+  &:not(:last-child) {
+    margin-bottom: 13px;
   }
 }
