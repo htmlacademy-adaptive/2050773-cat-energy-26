@@ -15,36 +15,132 @@
 
 .product-options__item {
   background-color: #f2f2f2;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: " ";
+    background-color: #68b738;
+    border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    content: " ";
+    background-repeat: no-repeat;
+  }
+
+  &:first-child::after {
+    background-image: url("../img/cat-sitting-index.svg");
+  }
+
+  &:last-child::after {
+    background-image: url("../img/cat-walking-index.svg");
+  }
 
   @media (max-width: @mobile-width-only) {
     padding: 30px 32px 22px 20px;
     margin-top: 20px;
     width: 100%;
+
+    &::before {
+      width: 50px;
+      height: 50px;
+      top: 25px;
+    }
+
+    &:first-child::after {
+      top: 20px;
+      left: 25px;
+      width: 36px;
+      height: 50px;
+    }
+
+    &:last-child::after {
+      top: 35px;
+      left: 5px;
+      width: 67px;
+      height: 28px;
+    }
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     padding: 77px 62px 57px 52px;
     margin-top: 30px;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 85px;
+      left: auto;
+      right: 65px;
+    }
+
+    &:first-child::after {
+      top: 70px;
+      left: auto;
+      right: 90px;
+      width: 140px;
+      height: 194px;
+    }
+
+    &:last-child::after {
+      top: 125px;
+      left: auto;
+      right: 35px;
+      width: 268px;
+      height: 112px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding: 77px 51px 59px 52px;
     width: 46.72%;
     margin-top: 82px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 50px;
+    }
+
+    &:first-child::after {
+      top: 41px;
+      left: 67px;
+      width: 70px;
+      height: 97px;
+    }
+
+    &:last-child::after {
+      top: 67px;
+      left: 33px;
+      width: 134px;
+      height: 56px;
+    }
   }
 }
 
 .product-options__title {
-  font-size: 24px;
-  line-height: 37px;
   font-weight: inherit;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 25px;
 
+  @media (max-width: @mobile-width-only) {
+    font-size: 24px;
+    line-height: 37px;
+    padding-left: 60px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 75px;
+    padding-left: 152px;
   }
 }
 
@@ -53,6 +149,10 @@
   color: #444444;
   margin: 0;
   margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    max-width: 340px;
+  }
 }
 
 .product-options__button {
