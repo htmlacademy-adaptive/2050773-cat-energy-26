@@ -44,7 +44,7 @@
   &--checkbox {
     width: 30px;
     height: 30px;
-    border: 2px solid #cdcdcd;
+    border: 1px solid #cdcdcd;
     position: relative;
   }
 
@@ -125,4 +125,14 @@
     width: 24px;
     height: 18px;
   }
+}
+
+.order-form__field-control:hover + .input__mark--radio,
+.additional-form__control:hover + .input__mark--checkbox {
+  border-color: #bababa;
+}
+
+.order-form__field-control:disabled ~ span,
+.additional-form__control:disabled ~ span {
+  opacity: 0.3;
 }
