@@ -5,12 +5,24 @@
   background-position: center;
   display: flex;
 
+  &::after {
+    position: absolute;
+    content: " ";
+    background-image: url("../../img/icons/gift.svg");
+  }
+
   @media (max-width: @mobile-width-only) {
     justify-content: center;
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../img/catalog-cat-phone.png");
     height: 289px;
+
+    &::after {
+      width: 78px;
+      height: 80px;
+      top: 65px;
+    }
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
@@ -19,6 +31,15 @@
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../img/catalog-cat-tablet.png");
     height: 200px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      width: 80px;
+      height: 82.5px;
+      top: 64px;
+      left: 88px;
+    }
   }
 
   @media (min-width: @desktop-width) {
