@@ -1,30 +1,50 @@
 .input {
-  border: solid 1px #e7e7e7;
+  outline: solid 1px #e7e7e7;
+  border: none;
+
+  ~ .form-owner__icon--mail {
+    stroke: #222222;
+  }
 
   &:hover {
-    border-color: #cdcdcd;
+    outline-color: #cdcdcd;
   }
 
   &:focus {
     outline: solid 2px #444444;
     border: none;
+
+    ~ .form-owner__icon--mail {
+      stroke: #68b738;
+    }
+
+    ~ .form-owner__icon--phone {
+      fill: #68b738;
+    }
   }
 
   &:focus:invalid {
     outline: solid 2px #ff8282;
+    border: none;
+
+    ~ .form-owner__icon--mail {
+      stroke: #ff8282;
+    }
+
+    ~ .form-owner__icon--phone {
+      fill: #ff8282;
+    }
   }
 }
 
 .input__mark {
-  width: 30px;
-  height: 30px;
   border: 2px solid #cdcdcd;
   position: relative;
 
   &--checkbox {
     width: 30px;
     height: 30px;
-    border: 2px solid #cdcdcd;
+    border: 1px solid #cdcdcd;
     position: relative;
   }
 
@@ -35,33 +55,84 @@
     border: solid 1px #cdcdcd;
     position: relative;
   }
+
+  @media (max-width: @mobile-width-only) {
+    width: 30px;
+    height: 30px;
+
+    &--checkbox {
+      width: 30px;
+      height: 30px;
+    }
+
+    &--radio {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+
+    &--checkbox {
+      width: 40px;
+      height: 40px;
+    }
+
+    &--radio {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
 
 .input[type="radio"]:checked + .input__mark--radio::before {
   position: absolute;
-  left: 7px;
-  top: 7px;
-  width: 13.5px;
-  height: 13.5px;
   background-color: #68b738;
   border-radius: 50%;
   content: "";
-}
 
+  @media (max-width: @mobile-width-only) {
+    width: 13.5px;
+    height: 13.5px;
+    left: 7px;
+    top: 7px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    left: 10px;
+    top: 10px;
+  }
+}
 
 .input[type="checkbox"]:checked + .input__mark--checkbox::before {
   position: absolute;
   content: url("../img/icons/green-tick--mobile.svg");
-  width: 10px;
-  height: 10px;
 
   @media (max-width: @mobile-width-only) {
     top: 7px;
     left: 3px;
+    width: 18px;
+    height: 14px;
   }
 
   @media (min-width: @tablet-width) {
-    top: 3px;
+    top: 10px;
     left: 5px;
+    width: 24px;
+    height: 18px;
   }
+}
+
+.order-form__field-control:hover + .input__mark--radio,
+.additional-form__control:hover + .input__mark--checkbox {
+  border-color: #bababa;
+}
+
+.order-form__field-control:disabled ~ span,
+.additional-form__control:disabled ~ span {
+  opacity: 0.3;
 }

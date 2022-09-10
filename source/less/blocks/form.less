@@ -19,8 +19,16 @@
 .form__field-label {
   text-transform: uppercase;
   color: #444444;
-  font-size: 16px;
-  font-weight: 18px;
+
+  @media (max-width: @mobile-width-only) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__title {
