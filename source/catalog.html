@@ -9,18 +9,19 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
 </head>
 <body class="page__body">
   <header class="main-header container">
     <div class="main-header__container">
       <div class="main-header__logo-wrapper">
-        <a class="main-header__logo">
+        <a class="main-header__logo" href="index.html">
           <picture class="main-header__logo-pic">
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="main-header__logo-pic" src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
           </picture>
-          <img class="main-header__logo-pic--mobile" width="101" height="18" src="img/logo-title-mobile.svg" alt=" ">
+          <img class="main-header__logo-pic--mobile" width="101" height="18" src="img/logo-title-mobile.svg" alt="Логотип магазина Кэт энерджи.">
         </a>
       </div>
       <nav class="main-nav main-nav--closed">
@@ -32,7 +33,7 @@
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--active" href="#">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Подбор программы</a>
@@ -309,6 +310,7 @@
     <div class="footer__wrapper">
       <div class="footer__container container">
         <a class="footer__link" href="index.html">
+          <span class="visually-hidden">Главная страница сайта Кэт Энерджи.</span>
           <svg width="128" height="24">
             <use xlink:href="img/sprite.svg#footer-logo"></use>
           </svg>

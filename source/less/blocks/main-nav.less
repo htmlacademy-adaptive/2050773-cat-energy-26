@@ -63,8 +63,14 @@
   }
 
   &--active {
-    @media (min-width: @tablet-width) and (max-width: 1439px) {
+    @media (min-width: @tablet-width) {
       border-bottom: solid 2px #68b738;
+    }
+
+    @media (min-width: @desktop-width) {
+      &__index {
+        border-bottom: solid 2px #ffffff;
+      }
     }
   }
 }
