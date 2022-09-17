@@ -25,7 +25,7 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    padding-bottom: 500px;
+    padding-bottom: 497px;
   }
 
   @media (min-width: @desktop-width) {
@@ -33,7 +33,7 @@
       position: absolute;
       content: "";
       width: 50%;
-      height: 707px;
+      height: 700px;
       top: -150px;
       right: 0;
       background-image:
@@ -53,25 +53,30 @@
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     padding-left: 87px;
+    padding-top: 40px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 80px;
-    padding-top: 87px;
+    padding-top: 80px;
   }
 }
 
 .main-product__title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   z-index: 1;
 
   @media (max-width: @mobile-width-only) {
     color: #ffffff;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
     margin-bottom: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 37px;
   }
 }
 
@@ -94,9 +99,23 @@
 .main-product__button {
   width: 100%;
 
+  @media (max-width: @mobile-width-only) {
+    & span {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    & span {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     width: 244px;
-    margin-top: 29px;
+    margin-top: 25px;
   }
 
   @media (min-width: @desktop-width) {
@@ -107,7 +126,7 @@
 
 .main-product__image {
   @media (max-width: @mobile-width-only) {
-    margin-top: 20px;
+    margin-top: 27px;
     width: 280px;
     height: 270px;
   }

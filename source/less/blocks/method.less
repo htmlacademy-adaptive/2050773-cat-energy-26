@@ -1,12 +1,12 @@
 .method__wrapper {
   @media (max-width: @mobile-width-only) {
-    padding-top: 20px;
-    padding-bottom: 53px;
+    padding-top: 22px;
+    padding-bottom: 46px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1449px) {
     padding-top: 45px;
-    padding-bottom: 70px;
+    padding-bottom: 103px;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,7 +17,10 @@
 
 .method__title {
   margin: 0;
-  margin-bottom: 42px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 44px;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 72px;
@@ -35,7 +38,8 @@
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 134px 182px;
+    gap: 134px 137px;
+    margin-right: 75px;
   }
 
   @media (min-width: @desktop-width) {
@@ -61,8 +65,12 @@
       display: none;
     }
 
+    & br::after {
+      content: " , ";
+    }
+
     &:not(:last-child) {
-      margin-bottom: 26px;
+      margin-bottom: 20px;
     }
   }
 
@@ -97,10 +105,10 @@
     z-index: -1;
     background-image: url("../img/leaf.svg");
     background-repeat: no-repeat;
-    background-position: 20px center;
+    background-position: center;
 
     @media (max-width: @mobile-width-only) {
-      top: 0;
+      top: -2px;
       left: 0;
     }
 
@@ -125,10 +133,10 @@
     z-index: -1;
     background-image: url("../img/boil.svg");
     background-repeat: no-repeat;
-    background-position: 15px center;
+    background-position: center;
 
     @media (max-width: @mobile-width-only) {
-      top: 0;
+      top: -3px;
       left: 0;
     }
 
@@ -152,10 +160,10 @@
     z-index: -1;
     background-image: url("../img/eat.svg");
     background-repeat: no-repeat;
-    background-position: 15px center;
+    background-position: center;
 
     @media (max-width: @mobile-width-only) {
-      top: 0;
+      top: -2px;
       left: 0;
     }
 
@@ -179,10 +187,10 @@
     z-index: -1;
     background-image: url("../img/watches.svg");
     background-repeat: no-repeat;
-    background-position: 15px center;
+    background-position: center;
 
     @media (max-width: @mobile-width-only) {
-      top: 0;
+      top: -2px;
       left: 0;
     }
 

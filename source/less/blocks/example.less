@@ -1,6 +1,7 @@
 .example {
   background-color: #eaeaea;
   position: relative;
+  overflow-x: hidden;
 
   @media (min-width: @tablet-width) {
     background-color: #ffffff;
@@ -8,7 +9,8 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    margin-top: 30px;
+    margin-top: 55px;
+    padding-bottom: 50px;
   }
 }
 
@@ -16,24 +18,44 @@
   color: #444444;
   font-family: "Arial", sans-serif;
   margin: 0;
-  margin-bottom: 20px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    max-width: 690px;
+    margin-bottom: 53px;
+  }
 
   @media (min-width: @desktop-width) {
-    width: 436px;
+    max-width: 436px;
     margin-bottom: 70px;
   }
 }
 
 .example__title {
+  position: relative;
   margin: 0;
-  padding-top: 25px;
 
   @media (max-width: @mobile-width-only) {
-    padding-bottom: 40px;
+    padding-top: 27px;
+    padding-bottom: 43px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-top: 45px;
     padding-bottom: 63px;
+
+    &::before {
+      position: absolute;
+      content: " ";
+      width: 1000%;
+      height: 1px;
+      background-color: #e6e6e6;
+      top: 0;
+      left: -30px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -45,11 +67,15 @@
 .example__term {
   font-size: 24px;
   text-transform: uppercase;
-  margin-bottom: 9px;
   border: solid 1px #cdcdcd;
+  border-radius: 3%;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 19px;
   width: 124px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 6px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -81,7 +107,7 @@
     line-height: 14px;
     background-color: #ffffff;
     width: 135px;
-    margin-top: -17px;
+    margin-top: -10px;
 
     br {
       display: none;
@@ -90,17 +116,24 @@
 
   @media (min-width: @desktop-width) {
     background-color: #f2f2f2;
+    margin-top: -22px;
   }
 }
 
 .example__list {
   display: flex;
-  // justify-content: space-around;
   text-align: center;
+  margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
 }
 
 .example__all-costs {
   text-align: center;
+  line-height: 20px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -110,13 +143,15 @@
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     flex-direction: column;
     align-items: flex-end;
+    gap: 10px;
+    margin-top: 10px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     align-items: flex-start;
     gap: 63px;
-    margin-top: 53px;
+    margin-top: 55px;
   }
 
   &-term {
@@ -152,7 +187,7 @@
 
   @media (min-width: @tablet-width) {
     width: 560px;
-    height: 512px;
+    padding-bottom: 95px;
   }
 }
 
@@ -183,7 +218,7 @@
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
   }
 
   @media (min-width: @desktop-width) {
@@ -216,14 +251,14 @@
 
 .example__text-container {
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    padding-bottom: 200px;
+    padding-bottom: 250px;
   }
 }
 
 .example__illustration-toggle {
   position: absolute;
   content: " ";
-  left: 50%;
+  left: 49.5%;
   width: 4px;
   height: 100%;
   background-color: #666666;
@@ -246,13 +281,18 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
-    top: -145px;
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    top: -100px;
+    height: 512px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -192px;
+    height: 552px;
   }
 
   &--button {
     position: absolute;
-    top: 45%;
     right: -18px;
     width: 40px;
     height: 40px;
@@ -260,5 +300,17 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    @media (max-width: @mobile-width-only) {
+      top: 42.5%;
+    }
+
+    @media (min-width: @tablet-width) and (max-width: 1439px) {
+      top: 40.5%;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 50%;
+    }
   }
 }
