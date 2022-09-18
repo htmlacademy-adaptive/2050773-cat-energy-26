@@ -5,15 +5,32 @@
     }
   }
 
+  @media (min-width: @tablet-width) and (max-width: 1439px)  {
+    display: grid;
+    grid-template-areas:
+      "name definition"
+      "button button";
+    grid-template-columns: 300px 1fr;
+    row-gap: 25px;
+  }
+
   @media (min-width: @desktop-width) {
-    display: flex;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    display: grid;
     align-items: baseline;
+    grid-template-areas: "name definition button";
+    grid-template-columns: 324px 2fr 1fr;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &:first-child {
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
   }
 }
 
 .additional-product__name {
+  grid-area: name;
   margin: 0;
   padding: 0;
   font-weight: inherit;
@@ -25,7 +42,6 @@
     line-height: 16px;
     margin-bottom: 12px;
     padding-top: 13px;
-
   }
 
   @media (min-width: @tablet-width) {
@@ -37,41 +53,50 @@
 .additional-product__list {
   margin: 0;
   display: flex;
-  justify-content: space-between;
   font-family: "Arial", sans-serif;
   color: #444444;
   line-height: 14px;
 
   @media (max-width: @mobile-width-only) {
     margin-bottom: 15px;
+    justify-content: space-between;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    margin-bottom: 25px;
     flex-direction: row;
-    gap: 46px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 55px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
+    justify-content: space-between;
+    // gap: 112px;
+    // margin: 0;
     margin-right: 38px;
+
   }
 }
 
 .additional-product__term {
+  grid-area: term;
+
   @media (max-width: @mobile-width-only) {
     padding: 0;
   }
+
   @media (min-width: @desktop-width) {
     order: 2;
   }
 }
 
 .additional-product__definition {
+  grid-area: definition;
   margin: 0;
 }
 
 .additional-product__button {
+  grid-area: button;
   width: 100%;
 
   @media (min-width: @desktop-width) {
@@ -85,15 +110,4 @@
   }
 }
 
-.additional-product__wrapper {
-  @media (min-width: @tablet-width) and (max-width: 1439px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-  }
-}
 
