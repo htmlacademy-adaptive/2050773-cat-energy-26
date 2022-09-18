@@ -9,12 +9,14 @@
 }
 
 .form-recipient__field {
-  &:not(:last-child) {
-    margin-bottom: 14px;
-
-    @media (min-width: @tablet-width) {
-      margin-bottom: 20px;
+  @media (max-width: @mobile-width-only) {
+    &:not(:last-child) {
+      margin-bottom: 14px;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 15px;
   }
 
   &:last-child {

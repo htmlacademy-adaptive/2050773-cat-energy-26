@@ -4,8 +4,8 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    margin-top: 65px;
-    margin-bottom: 30px;
+    margin-top: 55px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -34,8 +34,12 @@
     margin-bottom: 34px;
   }
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+  }
+
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    padding-left: 8%;
+    padding-left: 9%;
   }
 
   @media (min-width: @desktop-width) {
@@ -62,14 +66,10 @@
     position: absolute;
     width: 1000%;
     height: 2px;
-    top: 50%;
+    top: 55.5%;
     left: -110px;
     background-color: #68b738;
     z-index: -1;
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
   }
 }
 
@@ -80,12 +80,13 @@
   list-style-type: none;
 
   @media (max-width: @mobile-width-only) {
-    margin-bottom: 34px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 55px;
   }
 
   @media (min-width: @desktop-width) {
@@ -96,6 +97,10 @@
 
 .additional-form__field-label {
   color: #000000;
+
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 7px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

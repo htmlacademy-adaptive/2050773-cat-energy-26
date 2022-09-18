@@ -9,7 +9,8 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    padding: 60px 40px 56px 40px;
+    padding-top: 60px;
+    padding-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
@@ -20,8 +21,6 @@
     padding: 60px 80px;
     z-index: 10;
   }
-
-
 }
 
 .invitation__slogan {
@@ -61,6 +60,10 @@
     &--street {
       display: flex;
       padding-bottom: 20px;
+
+      @media (min-width: @tablet-width) and (max-width: 1439px) {
+        margin-top: -5px;
+      }
     }
   }
 
