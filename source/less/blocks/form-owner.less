@@ -1,8 +1,12 @@
 .form-owner {
   position: relative;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
     margin-top: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 43px;
   }
 }
 
@@ -20,7 +24,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 486px;
+    width: 472px;
+
+    &--email {
+      width: 486px;
+    }
   }
 }
 
@@ -46,16 +54,14 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 63px;
-  }
-
   @media (min-width: @tablet-width) and (max-width: 1439px) {
+    margin-bottom: 63px;
     padding-left: 9%;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 7.3%;
+    padding-left: 7.5%;
+    margin-bottom: 60px;
   }
 
   & span {
@@ -111,7 +117,7 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
     &--mail {
       top: 20px;
       right: 11%;
@@ -122,10 +128,29 @@
       right: 11%;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    &--mail {
+      top: 20px;
+      left: 640px;
+    }
+
+    &--phone {
+      top: 20px;
+      right: 125px;
+    }
+  }
 }
+
 
 .form-owner__email {
   @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
+}
+
+.form-owner__phone {
+  @media (min-width: @desktop-width) {
     gap: 20px;
   }
 }

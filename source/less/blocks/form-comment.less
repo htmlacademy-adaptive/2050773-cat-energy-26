@@ -3,8 +3,12 @@
     margin-top: 25px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
     margin-top: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 55px;
   }
 }
 
@@ -23,7 +27,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 7.3%;
+    padding-left: 7.7%;
   }
 
   & span {
@@ -46,7 +50,7 @@
     position: absolute;
     width: 1000%;
     height: 2px;
-    top: 50%;
+    top: 56%;
     left: -110px;
     background-color: #68b738;
     z-index: -1;

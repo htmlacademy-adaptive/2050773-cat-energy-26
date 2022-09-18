@@ -48,8 +48,13 @@
 }
 
 .result-form--answer {
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
     padding-left: 3px;
+    padding-top: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 23px;
     padding-top: 7px;
   }
 }
