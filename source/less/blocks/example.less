@@ -9,7 +9,7 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    margin-top: 55px;
+    padding-top: 55px;
   }
 }
 
@@ -99,7 +99,7 @@
     font-size: 12px;
     line-height: 12px;
     width: 87px;
-    // margin-top: -15px;
+    margin-top: -15px;
   }
 
   @media (min-width: @tablet-width) {
@@ -185,9 +185,16 @@
     height: 256px;
   }
 
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-bottom: 95px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 560px;
-    padding-bottom: 95px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -80px;
   }
 }
 
@@ -195,8 +202,11 @@
   height: 100%;
   object-fit: cover;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
     margin-top: -150px;
+  }
+
+  @media (min-width: @tablet-width) {
     width: 560px;
     height: 512px;
   }
@@ -238,9 +248,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 70px;
-    margin-bottom: -15px;
     background-color: #f2f2f2;
+    padding-bottom: 73px;
 
     &--desktop {
       width: 84.7%;
@@ -253,6 +262,10 @@
 .example__text-container {
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     padding-bottom: 250px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 70px;
   }
 }
 
@@ -288,8 +301,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -192px;
-    height: 552px;
+    top: -82px;
+    height: 512px;
   }
 
   &--button {
@@ -311,7 +324,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      top: 50%;
+      top: 47%;
     }
   }
 }
