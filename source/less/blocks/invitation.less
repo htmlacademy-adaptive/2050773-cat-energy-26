@@ -1,4 +1,5 @@
 .invitation {
+  position: relative;
   display: flex;
   justify-content: space-between;
 
@@ -14,7 +15,7 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    margin-top: 80px;
+    margin-top: 95px;
     background-color: #ffffff;
     width: 565px;
     padding: 60px 80px;
@@ -44,19 +45,25 @@
   line-height: 20px;
   font-style: normal;
   color: #444444;
-  text-align: end;
 
   @media (max-width: @mobile-width-only) {
     max-width: 139px;
+    text-align: left;
   }
 
   @media (min-width: @tablet-width) {
     max-width: 159px;
     font-size: 16px;
+    text-align: end;
+
 
     &--street {
       display: flex;
       padding-bottom: 20px;
+
+      @media (min-width: @tablet-width) and (max-width: 1439px) {
+        margin-top: -5px;
+      }
     }
   }
 
@@ -71,7 +78,31 @@
   border: none;
   width: 100%;
 
+  @media (max-width: @mobile-width-only) {
+    background-image: url("../../img/location/location_mobile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/location/location_mobile@2px.png");
+    }
+  }
+
   @media (min-width: @tablet-width) {
     height: 400px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    background-image: url("../../img/location/tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/location/tablet@2px.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/location/desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/location/desktop@2px.png");
+    }
   }
 }

@@ -1,5 +1,3 @@
-
-
 .product-options__list {
   margin: 0;
   padding: 0;
@@ -9,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 210px;
+    margin-top: 185px;
   }
 }
 
@@ -39,7 +37,7 @@
   }
 
   @media (max-width: @mobile-width-only) {
-    padding: 30px 32px 22px 20px;
+    padding: 30px 32px 20px 20px;
     margin-top: 20px;
     width: 100%;
 
@@ -47,47 +45,48 @@
       width: 50px;
       height: 50px;
       top: 25px;
+      left: 22px;
     }
 
     &:first-child::after {
-      top: 20px;
-      left: 25px;
+      top: 22px;
+      left: 29px;
       width: 36px;
       height: 50px;
     }
 
     &:last-child::after {
       top: 35px;
-      left: 5px;
+      left: 14px;
       width: 67px;
       height: 28px;
     }
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    padding: 77px 62px 57px 52px;
-    margin-top: 30px;
+    padding: 76px 62px 57px 52px;
+    margin-top: 27px;
 
     &::before {
       width: 200px;
       height: 200px;
-      top: 85px;
+      top: 90px;
       left: auto;
-      right: 65px;
+      right: 62px;
     }
 
     &:first-child::after {
-      top: 70px;
+      top: 80px;
       left: auto;
-      right: 90px;
+      right: 93px;
       width: 140px;
       height: 194px;
     }
 
     &:last-child::after {
-      top: 125px;
+      top: 135px;
       left: auto;
-      right: 35px;
+      right: 28px;
       width: 268px;
       height: 112px;
     }
@@ -96,13 +95,13 @@
   @media (min-width: @desktop-width) {
     padding: 77px 51px 59px 52px;
     width: 46.72%;
-    margin-top: 82px;
+    margin-top: 85px;
 
     &::before {
       width: 100px;
       height: 100px;
       top: 47px;
-      left: 50px;
+      left: 53px;
     }
 
     &:first-child::after {
@@ -125,22 +124,23 @@
   font-weight: inherit;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 25px;
 
   @media (max-width: @mobile-width-only) {
     font-size: 24px;
     line-height: 37px;
-    padding-left: 60px;
+    padding-left: 70px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 75px;
-    padding-left: 152px;
+    margin-bottom: 73px;
+    padding-left: 162px;
   }
 }
 
@@ -148,10 +148,18 @@
   font-family: "Arial", sans-serif;
   color: #444444;
   margin: 0;
-  margin-bottom: 42px;
+
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 40px;
+  }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     max-width: 340px;
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 28px;
   }
 }
 
@@ -159,15 +167,44 @@
   transform: scaleX(1);
   transform-origin: center left;
   transition: transform 0.5s;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 4px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .product-options__button {
-  display: flex;
+  position: relative;
   text-decoration: none;
   color: #000000;
   text-transform: uppercase;
-  font-size: 16px;
-  line-height: 16px;
+
+  @media (max-width: @mobile-width-only) {
+    font-size: 16px;
+    line-height: 16px;
+
+    & span {
+      margin-right: -3px;
+    }
+
+    &::before {
+      position: absolute;
+      content: " ";
+      width: 240px;
+      height: 1px;
+      background-color: #d9d9d9;
+      top: -17px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   & span {
     @media (max-width: @mobile-width-only) {

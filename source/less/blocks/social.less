@@ -4,9 +4,9 @@
   @media (max-width: @mobile-width-only) {
     border-top: solid 1px #d9d9d9;
     border-bottom: solid 1px #d9d9d9;
-    margin-top: 32px;
-    padding-top: 23px;
-    padding-bottom: 23px;
+    margin-top: 27px;
+    padding-top: 20px;
+    padding-bottom: 17px;
   }
 }
 
@@ -17,19 +17,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 25px;
+
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+  }
 }
 
 .social__link {
   & svg {
     fill: #666666;
-  }
-
-  &--vkontakte {
-    margin-right: 26px;
-  }
-
-  &--youtube {
-    margin-right: 30px;
   }
 
   &:hover svg {

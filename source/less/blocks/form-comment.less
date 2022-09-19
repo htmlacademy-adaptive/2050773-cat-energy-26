@@ -1,10 +1,14 @@
 .form-comment {
   @media (max-width: @mobile-width-only) {
-    margin-top: 23px;
+    margin-top: 25px;
   }
 
-  @media (min-width: @tablet-width) {
-    margin-top: 65px;
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    margin-top: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 55px;
   }
 }
 
@@ -19,11 +23,11 @@
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    padding-left: 8%;
+    padding-left: 9%;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 7.3%;
+    padding-left: 7.7%;
   }
 
   & span {
@@ -46,23 +50,34 @@
     position: absolute;
     width: 1000%;
     height: 2px;
-    top: 50%;
+    top: 56%;
     left: -110px;
     background-color: #68b738;
     z-index: -1;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 67px;
   }
 }
 
 .form-comment__textarea {
-  height: 150px;
   width: 100%;
   color: #444444;
-  font-size: 16px;
-  line-height: 18px;
   font-family: inherit;
   font-weight: inherit;
+
+  @media (max-width: @mobile-width-only) {
+    height: 150px;
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 7px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 174px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 10px;
+  }
 }

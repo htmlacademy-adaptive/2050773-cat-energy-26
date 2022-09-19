@@ -74,21 +74,21 @@
                 <label class="form__field order-form__field">
                   <input class="order-form__field-control input visually-hidden" type="radio" value="Weight-loss" name="form__result-group" checked>
                   <span class="input__mark--radio"></span>
-                  <span class="form__field-label">Похудение</span>
+                  <span class="form__field-label result-form--answer">Похудение</span>
                 </label>
               </li>
               <li class="result-form__item">
                 <label class="form__field order-form__field">
                   <input class="order-form__field-control input visually-hidden" type="radio" value="Mass-gain" name="form__result-group">
                   <span class="input__mark--radio"></span>
-                  <span class="form__field-label">Набор массы</span>
+                  <span class="form__field-label result-form--answer">Набор массы</span>
                 </label>
               </li>
               <li class="result-form__item">
                 <label class="form__field order-form__field">
                   <input class="order-form__field-control input visually-hidden" type="radio" value="Need-advice" name="form__result-group">
                   <span class="input__mark--radio"></span>
-                  <span class="form__field-label">Не знаю (Нужен ваш совет)</span>
+                  <span class="form__field-label result-form--answer">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -97,22 +97,22 @@
       </div>
       <fieldset class="form__fieldset form-owner">
         <legend class=" form-owner__title">
-            <span class="form__title">Контактные данные<br> (владельца кота)</span>
+            <span class="form__title">Контактные данные&nbsp;<br> (владельца кота)</span>
         </legend>
         <div class="container container--padding">
           <div class="form-owner__wrapper">
             <label class="form__field form-owner__email order-form__field" for="owner-email">
               <span class="form__field-label">E-mail:*</span>
-              <input class="form__field-control form-owner__control input" type="email" id="owner-email" name="form-owner-email" value="kuklachev@gmail.com" required>
+              <input class="form__field-control form-owner__control form-owner__control--email input" type="email" id="owner-email" name="form-owner-email" value="kuklachev@gmail.com" required>
               <svg class="form-owner__icon form-owner__icon--mail" width="19" height="14">
-                <use xlink:href="img/sprite.svg#mail"></use>
+                <use xlink:href="img/sprite.svg#icon_email"></use>
               </svg>
             </label>
             <label class="form__field form-owner__phone order-form__field" for="owner-phone">
               <span class="form__field-label">Телефон:*</span>
-              <input class="form__field-control form-owner__control input" type="text" id="owner-phone" name="form-owner-phone" value="8 (960) 900-60-90" required>
+              <input class="form__field-control form-owner__control form-owner__control--phone input" type="text" id="owner-phone" name="form-owner-phone" value="8 (960) 900-60-90" required>
               <svg class="form-owner__icon form-owner__icon--phone" width="20" height="21">
-                <use xlink:href="img/sprite.svg#phone"></use>
+                <use xlink:href="img/sprite.svg#phone_form"></use>
               </svg>
             </label>
           </div>
@@ -143,16 +143,16 @@
             </li>
             <li class="additional-form__item">
               <label class="form__field additional-form__field">
-                <input class="additional-form__control input visually-hidden" type="checkbox" name="Milk">
+                <input class="additional-form__control input visually-hidden" type="checkbox" name="Water">
                 <span class="input__mark--checkbox"></span>
-                <span class="form__field-label additional-form__field-label">молоко</span>
+                <span class="form__field-label additional-form__field-label">питьевая вода</span>
               </label>
             </li>
             <li class="additional-form__item">
               <label class="form__field additional-form__field">
-                <input class="additional-form__control input visually-hidden" type="checkbox" name="Water">
+                <input class="additional-form__control input visually-hidden" type="checkbox" name="Milk">
                 <span class="input__mark--checkbox"></span>
-                <span class="form__field-label additional-form__field-label">питьевая вода</span>
+                <span class="form__field-label additional-form__field-label">молоко</span>
               </label>
             </li>
             <li class="additional-form__item">
@@ -166,7 +166,7 @@
         </div>
       </fieldset>
       <div class="container container--padding form__button-wrapper">
-        <button class="form__button button button__green" type="submit">Отправить заявку</button>
+        <button class="button button__green form__button" type="submit">Отправить заявку</button>
         <p class="form__legend">* — Обязательные поля</p>
       </div>
     </form>
@@ -185,7 +185,7 @@
     class="invitation__map"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
     width="320"
-    height="400"
+    height="362"
     allowfullscreen
     title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"
   ></iframe>
