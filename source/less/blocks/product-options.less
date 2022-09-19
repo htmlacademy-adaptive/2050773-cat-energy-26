@@ -150,7 +150,7 @@
   margin: 0;
 
   @media (max-width: @mobile-width-only) {
-    margin-bottom: 42px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
@@ -167,6 +167,14 @@
   transform: scaleX(1);
   transform-origin: center left;
   transition: transform 0.5s;
+
+  @media (max-width: @mobile-width-only) {
+    margin-top: 4px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .product-options__button {

@@ -34,7 +34,7 @@
     font-size: 20px;
     line-height: 20px;
     padding-top: 22px;
-    padding-bottom: 22px;
+    padding-bottom: 23px;
   }
 
   @media (min-width: @tablet-width) {
@@ -107,11 +107,11 @@
 .main-nav--opened .main-nav__list {
   @media (max-width: @mobile-width-only) {
     position: absolute;
-    top: 50px;
-    right: 0;
-    left: 0;
+    top: 43px;
+    right: -7%;
+    left: -7%;
     z-index: 10;
-    min-height: 234px;
+    min-height: 198px;
     background-color: #ffffff;
   }
 }
@@ -152,7 +152,8 @@
 }
 
 .main-nav--nojs .main-nav__list {
-  position: static;
+  position: absolute;
+  top: 43px;
   min-height: 0;
 }
 
