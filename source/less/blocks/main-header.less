@@ -1,6 +1,11 @@
 .main-header {
-  padding-top: 25px;
-  padding-bottom: 17px;
+  padding-top: 22px;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-top: 56px;
@@ -18,15 +23,19 @@
   &:active img {
     opacity: 0.6;
   }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    margin-top: -5px;
+  }
 }
 
 .main-header__logo-pic {
   @media (max-width: @mobile-width-only) {
     position: absolute;
     left: 0;
-    top: -10px;
     width: 34px;
     height: 38px;
+    top: -10px;
   }
 
   @media (min-width: @tablet-width) {
@@ -44,7 +53,6 @@
     height: 59px;
   }
 }
-
 
 .main-header__logo-wrapper {
   position: relative;

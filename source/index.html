@@ -25,7 +25,7 @@
           <img class="main-header__logo-pic--mobile" width="101" height="18" src="img/logo-title-mobile.svg" alt="Логотип магазина Кэт энерджи.">
         </a>
       </div>
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav main-nav--opened">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -57,7 +57,9 @@
           <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
           <img class="main-product__image" width="280" height="270" alt='' src="img/index-can-phone.png" srcset="img/index-can-phone@2x.png 2x">
         </picture>
-        <button class=" main-product__button button button__green" type="button">Подобрать программу</button>
+        <button class="button button__green main-product__button" type="button">
+          <span>Подобрать программу</span>
+        </button>
       </div>
     </section>
     <section class="container product-options">
@@ -69,7 +71,7 @@
               лазить по деревьям? Пора на диету! Cat Energy Slim поможет
               вашему питомцу сбросить лишний вес.
           </p>
-          <a class="product-options__button" href="#">
+          <a class="product-options__button" href="catalog.html">
             <span>каталог slim</span>
             <svg class="product-options__arrow" width="24" height="12">
               <use xlink:href="img/sprite.svg#arrow"></use>
@@ -81,7 +83,7 @@
           <p class="product-options__text">Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту нарастить
             необходимые мышцы!</p>
-          <a class="product-options__button" href="#">
+          <a class="product-options__button" href="catalog.html">
             <span>каталог pro</span>
             <svg class="product-options__arrow" width="24" height="12">
               <use xlink:href="img/sprite.svg#arrow"></use>
@@ -113,7 +115,7 @@
           </li>
           <li class="method__item method__item--results">
             <p class="method__description">Уже через месяц наслаждайтесь
-              изменениями к лучшему
+              изменениями к лучшему&nbsp;<br>
               вашего питомца!
             </p>
           </li>
@@ -134,11 +136,13 @@
                 <dl class="example__list">
                   <div class="example__wrapper">
                     <dt class="example__term">5 кг</dt>
-                    <dd class="example__description">снижение<br> веса</dd>
+                    <dd class="example__description">снижение&nbsp;<br>
+                      веса</dd>
                   </div>
                   <div class="example__wrapper">
                     <dt class="example__term">60 дней</dt>
-                    <dd class="example__description">затрачено<br> времени</dd>
+                    <dd class="example__description">затрачено&nbsp;<br>
+                      времени</dd>
                   </div>
                 </dl>
                 <div class="example__all-costs">
@@ -169,13 +173,13 @@
               </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="container">
-      <div class="footer__invitation invitation">
+      <div class="footer__invitation invitation container--padding">
         <strong class="invitation__slogan">Приглашаем <br>к сотрудничеству <br> дилеров!</strong>
         <address class="invitation__address">
           <span class="invitation__address--street">ул. Большая Конюшенная, д. 19/8 </span>
@@ -187,7 +191,7 @@
     class="invitation__map"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
     width="320"
-    height="400"
+    height="362"
     allowfullscreen
     title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"
   ></iframe>
@@ -204,7 +208,7 @@
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Мы Вконтакте.</span>
-                <svg class="social__icon--vkontakte" width="28" height="22">
+                <svg class="social__icon social__icon--vkontakte" width="28" height="22">
                   <use xlink:href="img/sprite.svg#vkontakte"></use>
                 </svg>
               </a>
@@ -212,7 +216,7 @@
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Мы в Ютубе.</span>
-                <svg class="social__icon--youtube" width="28" height="22">
+                <svg class="ssocial__icon ocial__icon--youtube" width="28" height="22">
                   <use xlink:href="img/sprite.svg#youtube"></use>
                 </svg>
               </a>
@@ -220,7 +224,7 @@
             <li class="social__item">
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Мы в Телеграме.</span>
-                <svg class="social__icon--telegram" width="28" height="22">
+                <svg class="social__icon social__icon--telegram" width="28" height="22">
                   <use xlink:href="img/sprite.svg#telegram"></use>
                 </svg>
               </a>

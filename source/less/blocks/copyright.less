@@ -23,6 +23,10 @@
   align-items: center;
   justify-content: space-between;
 
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    align-items: flex-start;
+  }
+
   & svg {
     fill: #666666;
   }
@@ -36,8 +40,13 @@
     opacity: 0.3;
   }
 
-
   &:active b {
     opacity: 0.3;
+  }
+}
+
+.copyright__icon {
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    margin-top: -5px;
   }
 }

@@ -1,14 +1,28 @@
 .additional-products {
+  position: relative;
+  overflow-x: hidden;
+
   @media (max-width: @mobile-width-only) {
-    padding-top: 25px;
+    padding-top: 5px;
+
+    &::before {
+      position: absolute;
+      content: " ";
+      min-width: 320px;
+      width: 1000%;
+      height: 1px;
+      background-color: #ebebeb;
+      top: 0;
+      left: -20px;
+    }
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 68px;
+    padding-top: 58px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 75px;
+    padding-top: 67px;
   }
 }
 
@@ -16,14 +30,18 @@
   position: relative;
   width: 100%;
   overflow-x: hidden;
+  margin: 0;
   line-height: 33px;
 
   @media (max-width: @mobile-width-only) {
     padding-left: 6.25%;
+    margin-top: 17px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
     padding-left: 8%;
+    margin-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,11 +55,13 @@
     @media (max-width: @mobile-width-only) {
       padding: 0 20px;
       margin-left: -20px;
+      font-size: 24px;
+      line-height: 24px;
     }
 
     @media (min-width: @tablet-width) {
       padding: 0 40px;
-      margin-left: -40px;
+      margin-left: -30px;
     }
   }
 
@@ -50,7 +70,7 @@
     position: absolute;
     width: 1000%;
     height: 2px;
-    top: 50%;
+    top: 52%;
     left: -110px;
     background-color: #68b738;
     z-index: -1;
@@ -66,13 +86,35 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-left: 37px;
+    padding-right: 37px;
+    border: solid 1px #ebebeb;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 73.36%;
+  }
 }
 
 .additional-products__item {
   position: relative;
-  border-top: solid 1px #ebebeb;
 
-  &:last-child {
-    border-bottom: solid 1px #ebebeb;
+  &:not(:first-child) {
+    border-top: solid 1px #ebebeb;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    padding-top: 25px;
+    padding-bottom: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-top: solid 1px #ebebeb;
+
+    &:last-child {
+      border-bottom: solid 1px #ebebeb;
+    }
   }
 }

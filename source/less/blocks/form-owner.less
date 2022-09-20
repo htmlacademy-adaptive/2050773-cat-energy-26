@@ -1,9 +1,12 @@
 .form-owner {
   position: relative;
-  margin-top: 26px;
 
-  @media (min-width: @tablet-width) {
-    margin-top: 70px;
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    margin-top: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 43px;
   }
 }
 
@@ -16,8 +19,16 @@
 }
 
 .form-owner__control {
+  & input {
+    position: relative;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 486px;
+    width: 472px;
+
+    &--email {
+      width: 486px;
+    }
   }
 }
 
@@ -27,16 +38,30 @@
   overflow-x: hidden;
 
   @media (max-width: @mobile-width-only) {
+    padding-top: 25px;
     padding-left: 6.25%;
     margin-bottom: 35px;
+
+    &::after {
+      position: absolute;
+      content: " ";
+      min-width: 320px;
+      width: 1000%;
+      height: 1px;
+      background-color: #ebebeb;
+      top: 0;
+      left: -20px;
+    }
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    padding-left: 8%;
+    margin-bottom: 63px;
+    padding-left: 9%;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 7.3%;
+    padding-left: 7.5%;
+    margin-bottom: 60px;
   }
 
   & span {
@@ -65,21 +90,67 @@
     position: absolute;
     width: 1000%;
     height: 2px;
-    top: 30%;
+    top: 53%;
     left: -110px;
     background-color: #68b738;
     z-index: -1;
 
     @media (min-width: @tablet-width) {
-      top: 50%;
+      top: 55%;
     }
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
   }
 }
 
 .form-owner__icon {
-  margin-left: -45px;
+  position: absolute;
+  content: " ";
+
+  @media (max-width: @mobile-width-only) {
+    &--mail {
+      top: 15px;
+      right: 12%;
+    }
+
+    &--phone {
+      top: 70px;
+      right: 11%;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    &--mail {
+      top: 20px;
+      right: 11%;
+    }
+
+    &--phone {
+      top: 90px;
+      right: 11%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--mail {
+      top: 20px;
+      left: 640px;
+    }
+
+    &--phone {
+      top: 20px;
+      right: 125px;
+    }
+  }
+}
+
+
+.form-owner__email {
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
+}
+
+.form-owner__phone {
+  @media (min-width: @desktop-width) {
+    gap: 20px;
+  }
 }

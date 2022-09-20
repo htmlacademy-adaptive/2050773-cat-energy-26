@@ -1,6 +1,5 @@
 .special-offer {
   position: relative;
-  margin-top: 55px;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -8,10 +7,11 @@
   &::after {
     position: absolute;
     content: " ";
-    background-image: url("../../img/icons/gift.svg");
+    background-image: url("../../img/gift.svg");
   }
 
   @media (max-width: @mobile-width-only) {
+    margin-top: 55px;
     justify-content: center;
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
@@ -21,11 +21,12 @@
     &::after {
       width: 78px;
       height: 80px;
-      top: 65px;
+      top: 60px;
     }
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
+    margin-top: 70px;
     justify-content: flex-end;
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
@@ -37,8 +38,8 @@
     &::after {
       width: 80px;
       height: 82.5px;
-      top: 64px;
-      left: 88px;
+      top: 58px;
+      left: 80px;
     }
   }
 

@@ -1,5 +1,4 @@
 .button {
-  height: 40px;
   color: #ffffff;
   border: none;
   text-transform: uppercase;
@@ -7,11 +6,15 @@
   font-size: 16px;
   line-height: 20px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    font-size: 20px;
+  }
 }
 
 .button__green {
   background-color: #68b738;
-  padding: 7px 44px;
 
   &:hover {
     background-color: #5eaa2f;
