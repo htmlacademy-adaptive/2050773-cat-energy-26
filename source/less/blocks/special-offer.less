@@ -18,6 +18,13 @@
       url("../img/catalog-cat-phone.png");
     height: 289px;
 
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/catalog-cat-phone@2x.png");
+      background-size: cover;
+    }
+
     &::after {
       width: 78px;
       height: 80px;
@@ -32,6 +39,13 @@
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../img/catalog-cat-tablet.png");
     height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/catalog-cat-tablet@2x.png");
+      background-size: cover;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -50,6 +64,13 @@
     background-image:
       linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
       url("../img/catalog-cat-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        url("../img/catalog-cat-desktop@2x.png");
+      background-size: cover;
+    }
   }
 
   @media (max-width: @mobile-width-only) {
