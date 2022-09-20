@@ -18,17 +18,32 @@
   }
 }
 
-.form-owner__control {
-  & input {
-    position: relative;
-  }
+.form-owner__control input {
+  position: relative;
+}
 
+.form-owner__control {
   @media (min-width: @desktop-width) {
     width: 472px;
 
     &--email {
       width: 486px;
     }
+  }
+}
+
+.form-owner__title span {
+  background-color: #ffffff;
+  display: inline-block;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0 20px;
+    margin-left: -20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+    margin-left: -40px;
   }
 }
 
@@ -62,21 +77,6 @@
   @media (min-width: @desktop-width) {
     padding-left: 7.5%;
     margin-bottom: 60px;
-  }
-
-  & span {
-    background-color: #ffffff;
-    display: inline-block;
-
-    @media (max-width: @mobile-width-only) {
-      padding: 0 20px;
-      margin-left: -20px;
-    }
-
-    @media (min-width: @tablet-width) {
-      padding: 0 40px;
-      margin-left: -40px;
-    }
   }
 
   & br {
@@ -141,7 +141,6 @@
     }
   }
 }
-
 
 .form-owner__email {
   @media (min-width: @tablet-width) {

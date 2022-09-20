@@ -16,6 +16,12 @@
       background-position: center;
       background-size: cover;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/index-background-mobile@2x.png");
+      }
     }
   }
 
@@ -43,6 +49,12 @@
       background-position: center;
       background-size: cover;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+          url("../img/index-background-desktop@2x.png");
+      }
     }
   }
 }
@@ -96,6 +108,13 @@
   }
 }
 
+.main-product__button span {
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
 .main-product__button {
   width: 100%;
 
@@ -110,11 +129,6 @@
 
   @media (min-width: @tablet-width) {
     height: 54px;
-
-    & span {
-      font-size: 20px;
-      line-height: 20px;
-    }
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {

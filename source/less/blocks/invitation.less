@@ -27,6 +27,7 @@
   text-transform: uppercase;
   color: #111111;
   font-style: normal;
+  font-weight: 400;
 
   @media (max-width: @mobile-width-only) {
     font-size: 16px;
@@ -55,16 +56,6 @@
     max-width: 159px;
     font-size: 16px;
     text-align: end;
-
-
-    &--street {
-      display: flex;
-      padding-bottom: 20px;
-
-      @media (min-width: @tablet-width) and (max-width: 1439px) {
-        margin-top: -5px;
-      }
-    }
   }
 
   @media (min-width: @desktop-width) {
@@ -72,37 +63,13 @@
   }
 }
 
-.invitation__map {
-  position: relative;
-  display: block;
-  border: none;
-  width: 100%;
-
-  @media (max-width: @mobile-width-only) {
-    background-image: url("../../img/location/location_mobile.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/location/location_mobile@2px.png");
-    }
-  }
-
+.invitation__street {
   @media (min-width: @tablet-width) {
-    height: 400px;
+    display: flex;
+    padding-bottom: 20px;
   }
 
   @media (min-width: @tablet-width) and (max-width: 1439px) {
-    background-image: url("../../img/location/tablet.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/location/tablet@2px.png");
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    background-image: url("../../img/location/desktop.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/location/desktop@2px.png");
-    }
+    margin-top: -5px;
   }
 }
