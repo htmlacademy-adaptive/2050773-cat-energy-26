@@ -22,7 +22,7 @@
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="main-header__logo-pic" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Кэт энерджи.">
           </picture>
-          <img class="main-header__logo-pic main-header__logo-pic--mobile" width="101" height="18" src="img/logo-title-mobile.svg" alt="Логотип магазина Кэт энерджи.">
+          <img class="main-header__logo-mobile" width="101" height="18" src="img/logo-title-mobile.svg" alt="Логотип магазина Кэт энерджи.">
         </a>
       </div>
       <nav class="main-nav main-nav--closed">
@@ -70,7 +70,7 @@
                 </li>
               </ul>
             </a>
-            <button class="button button__green product-card__button" type="button">
+            <button class="button button--green product-card__button" type="button">
               <span>Заказать</span>
             </button>
           </section>
@@ -99,7 +99,7 @@
                 </li>
               </ul>
             </a>
-            <button class="button button__green product-card__button" type="button">
+            <button class="button button--green product-card__button" type="button">
               <span>Заказать</span>
             </button>
           </section>
@@ -127,7 +127,7 @@
                 </li>
               </ul>
             </a>
-            <button class="button button__green product-card__button" type="button">
+            <button class="button button--green product-card__button" type="button">
               <span>Заказать</span>
             </button>
           </section>
@@ -156,7 +156,7 @@
                 </li>
               </ul>
             </a>
-            <button class="button button__green product-card__button" type="button">
+            <button class="button button--green product-card__button" type="button">
               <span>Заказать</span>
             </button>
           </section>
@@ -184,7 +184,7 @@
                 </li>
               </ul>
             </a>
-            <button class="button button__green product-card__button" type="button">
+            <button class="button button--green product-card__button" type="button">
               <span>Заказать</span>
             </button>
           </section>
@@ -213,7 +213,7 @@
                 </li>
               </ul>
             </a>
-            <button class="button button__green product-card__button" type="button">
+            <button class="button button--green product-card__button" type="button">
               <span>Заказать</span>
             </button>
           </section>
@@ -241,7 +241,7 @@
                 </li>
               </ul>
             </a>
-            <button class="button button__green product-card__button" type="button">
+            <button class="button button--green product-card__button" type="button">
               <span>Заказать</span>
             </button>
           </section>
@@ -253,18 +253,18 @@
               <h3 class="product-card__title show-more__text">Показать еще 100500 товаров</h3>
               <span class="show-more__text-additional">На самом деле вкусов гораздо больше!</span>
             </a>
-            <button class="button button__gray product-card__button" type="button">
+            <button class="button button--gray product-card__button" type="button">
               <span>Показать все</span>
             </button>
           </section>
         </li>
       </ul>
     </div>
-    <section class="catalog__additional additional-products">
+    <section class="additional-products">
       <h2 class="additional-products__title">
         <span>Дополнительные товары</span>
       </h2>
-      <div class="container catalog__container">
+      <div class="container catalog-container">
         <ul class="additional-products__list">
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__name">Сахарозаменитель</h3>
@@ -272,7 +272,7 @@
               <span class="additional-product__definition">1 упаковка (100 г)</span>
               <span class="additional-product__term">200 Р.</span>
             </div>
-            <button class="button button__green additional-product__button" type="button">Заказать</button>
+            <button class="button button--green additional-product__button" type="button">Заказать</button>
           </li>
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__name">Питьевая вода</h3>
@@ -280,7 +280,7 @@
               <span class="additional-product__definition">5 литров</span>
               <span class="additional-product__term">50 Р.</span>
             </div>
-            <button class="additional-product__button button button__green" type="button">Заказать</button>
+            <button class="additional-product__button button button--green" type="button">Заказать</button>
           </li>
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__name">Молоко</h3>
@@ -288,7 +288,7 @@
               <span class="additional-product__definition">1 литр</span>
               <span class="additional-product__term">100 Р.</span>
             </div>
-            <button class="additional-product__button button button__green" type="button">Заказать</button>
+            <button class="additional-product__button button button--green" type="button">Заказать</button>
           </li>
           <li class="additional-products__item additional-product">
             <h3 class="additional-product__name">Витамины</h3>
@@ -296,10 +296,10 @@
               <span class="additional-product__definition">1 упаковка (30 г)</span>
               <span class="additional-product__term">300 Р.</span>
             </div>
-            <button class="additional-product__button button button__green" type="button">Заказать</button>
+            <button class="additional-product__button button button--green" type="button">Заказать</button>
           </li>
         </ul>
-        <section class="catalog__special special-offer">
+        <section class="special-offer">
           <h2 class="visually-hidden">Специальное предложение</h2>
           <p class="special-offer__text">Закажите все<br>
                 и получите чехол для<br> кота в подарок!
@@ -308,18 +308,18 @@
       </div>
     </section>
   </main>
-  <footer class="footer footer--grey">
+  <footer class="footer footer--gray">
     <div class="container">
-      <div class="footer__invitation invitation container--padding">
+      <div class="footer__invitation invitation container__padding">
         <strong class="invitation__slogan">Приглашаем <br>к сотрудничеству <br> дилеров!</strong>
         <address class="invitation__address">
-          <span class="invitation__address--street">ул. Большая Конюшенная, д. 19/8 </span>
-          <span class="invitation__address--city">Санкт-Петербург</span>
+          <span class="invitation__street">ул. Большая Конюшенная, д. 19/8 </span>
+          <span class="invitation__city">Санкт-Петербург</span>
         </address>
       </div>
     </div>
     <iframe
-    class="invitation__map"
+    class="footer__map"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
     width="320"
     height="362"

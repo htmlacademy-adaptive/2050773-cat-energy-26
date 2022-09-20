@@ -16,7 +16,7 @@
   }
 }
 
-.catalog__container {
+.catalog-container {
   padding-bottom: 35px;
 
   @media (min-width: @tablet-width) {
@@ -58,9 +58,15 @@
     }
   }
 
+  @media (min-width: @tablet-width) and (max-width: 1439px) {
+    &:nth-child(2) h3 {
+      margin-top: 30px;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     &:nth-child(2) h3 {
-      margin-top: 37px;
+      margin-top: 43px;
     }
   }
 }

@@ -37,57 +37,43 @@
   }
 }
 
-.input__mark {
+.input-radio {
   border: 2px solid #cdcdcd;
   position: relative;
-
-  &--checkbox {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #cdcdcd;
-    position: relative;
-  }
-
-  &--radio {
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    border: solid 1px #cdcdcd;
-    position: relative;
-  }
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: solid 1px #cdcdcd;
+  position: relative;
 
   @media (max-width: @mobile-width-only) {
     width: 30px;
     height: 30px;
-
-    &--checkbox {
-      width: 30px;
-      height: 30px;
-    }
-
-    &--radio {
-      width: 30px;
-      height: 30px;
-    }
   }
 
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-
-    &--checkbox {
-      width: 40px;
-      height: 40px;
-    }
-
-    &--radio {
-      width: 40px;
-      height: 40px;
-    }
   }
 }
 
-.input[type="radio"]:checked + .input__mark--radio::before {
+.input-checkbox {
+  border: 1px solid #cdcdcd;
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+.input[type="radio"]:checked + .input-radio::before {
   position: absolute;
   background-color: #68b738;
   border-radius: 50%;
@@ -108,7 +94,7 @@
   }
 }
 
-.input[type="checkbox"]:checked + .input__mark--checkbox::before {
+.input[type="checkbox"]:checked + .input-checkbox::before {
   position: absolute;
   content: url("../img/green-tick--mobile.svg");
 
@@ -127,8 +113,8 @@
   }
 }
 
-.order-form__field-control:hover + .input__mark--radio,
-.additional-form__control:hover + .input__mark--checkbox {
+.order-form__field-control:hover + .input-radio,
+.additional-form__control:hover + .input-checkbox {
   border-color: #bababa;
 }
 

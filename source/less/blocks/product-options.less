@@ -206,21 +206,21 @@
     line-height: 30px;
   }
 
-  & span {
-    @media (max-width: @mobile-width-only) {
-      padding-right: 17px;
-    }
-
-    @media (min-width: @tablet-width) {
-      padding-right: 25px;
-    }
-  }
-
   &:active {
     opacity: 0.3;
   }
 
   &:hover svg {
     transform: scaleX(1.4);
+  }
+}
+
+.product-options__button span {
+  @media (max-width: @mobile-width-only) {
+    padding-right: 17px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 25px;
   }
 }

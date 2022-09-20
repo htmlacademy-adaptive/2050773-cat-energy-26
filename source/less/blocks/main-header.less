@@ -29,6 +29,12 @@
   }
 }
 
+.main-header__logo-mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .main-header__logo-pic {
   @media (max-width: @mobile-width-only) {
     position: absolute;
@@ -39,10 +45,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    &--mobile {
-      display: none;
-    }
-
     margin-right: 14px;
     width: 174px;
     height: 52px;

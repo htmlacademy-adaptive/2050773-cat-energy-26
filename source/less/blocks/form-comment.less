@@ -30,21 +30,6 @@
     padding-left: 7.7%;
   }
 
-  & span {
-    background-color: #ffffff;
-    display: inline-block;
-
-    @media (max-width: @mobile-width-only) {
-      padding: 0 20px;
-      margin-left: -20px;
-    }
-
-    @media (min-width: @tablet-width) {
-      padding: 0 40px;
-      margin-left: -40px;
-    }
-  }
-
   &::before {
     content: " ";
     position: absolute;
@@ -58,6 +43,21 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 67px;
+  }
+}
+
+.form-comment__title span {
+  background-color: #ffffff;
+  display: inline-block;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0 20px;
+    margin-left: -20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+    margin-left: -40px;
   }
 }
 

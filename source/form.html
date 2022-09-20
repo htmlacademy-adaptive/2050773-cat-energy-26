@@ -16,13 +16,13 @@
   <header class="main-header container">
     <div class="main-header__container">
       <div class="main-header__logo-wrapper">
-        <a class="main-header__logo" href="index.html">
+        <a class="main-header__logo">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="main-header__logo-pic" src="img/logo-mobile.svg" width="34" height="38"  alt="Логотип магазина Кэт энерджи.">
+            <img class="main-header__logo-pic" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Кэт энерджи.">
           </picture>
-          <img class="main-header__logo-pic--mobile" width="101" height="18" src="img/logo-title-mobile.svg" alt="Логотип магазина Кэт энерджи.">
+          <img class="main-header__logo-mobile" width="101" height="18" src="img/logo-title-mobile.svg" alt="Логотип магазина Кэт энерджи.">
         </a>
       </div>
       <nav class="main-nav main-nav--closed">
@@ -44,13 +44,13 @@
     </div>
   </header>
   <main class="main-container">
-    <div class="form-section container container--padding">
+    <div class="form-section container container__padding">
       <h1 class="form-section__title heading">Подбор программы</h1>
       <p class="form-section__text">Заполните анкету, и мы подберем<br>
           программу питания для вашего кота</p>
     </div>
     <form class="form order-form" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="container container--padding">
+      <div class="container container__padding">
         <div class="form__wrapper">
           <fieldset class="form__fieldset form-recipient">
             <legend class="visually-hidden">Данные кота</legend>
@@ -73,22 +73,22 @@
               <li class="result-form__item">
                 <label class="form__field order-form__field">
                   <input class="order-form__field-control input visually-hidden" type="radio" value="Weight-loss" name="form__result-group" checked>
-                  <span class="input__mark--radio"></span>
-                  <span class="form__field-label result-form--answer">Похудение</span>
+                  <span class="input-radio"></span>
+                  <span class="form__field-label result-form-answer">Похудение</span>
                 </label>
               </li>
               <li class="result-form__item">
                 <label class="form__field order-form__field">
                   <input class="order-form__field-control input visually-hidden" type="radio" value="Mass-gain" name="form__result-group">
-                  <span class="input__mark--radio"></span>
-                  <span class="form__field-label result-form--answer">Набор массы</span>
+                  <span class="input-radio"></span>
+                  <span class="form__field-label result-form-answer">Набор массы</span>
                 </label>
               </li>
               <li class="result-form__item">
                 <label class="form__field order-form__field">
                   <input class="order-form__field-control input visually-hidden" type="radio" value="Need-advice" name="form__result-group">
-                  <span class="input__mark--radio"></span>
-                  <span class="form__field-label result-form--answer">Не знаю (Нужен ваш совет)</span>
+                  <span class="input-radio"></span>
+                  <span class="form__field-label result-form-answer">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -99,7 +99,7 @@
         <legend class=" form-owner__title">
             <span class="form__title">Контактные данные&nbsp;<br> (владельца кота)</span>
         </legend>
-        <div class="container container--padding">
+        <div class="container container__padding">
           <div class="form-owner__wrapper">
             <label class="form__field form-owner__email order-form__field" for="owner-email">
               <span class="form__field-label">E-mail:*</span>
@@ -122,7 +122,7 @@
         <legend class="form-comment__title">
           <span class="form__title">Комментарий</span>
         </legend>
-        <div class="container container--padding">
+        <div class="container container__padding">
           <label class="form__field order-form__field" for="owner-comment">
             <textarea class="form__field-control form-comment__textarea input" id="owner-comment" name="form-owner-comment"  placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
@@ -132,57 +132,57 @@
         <legend class="additional-form__title">
           <span class="form__title">Дополнительно</span>
         </legend>
-        <div class="container container--padding">
+        <div class="container container__padding">
           <ul class="additional-form__list">
             <li class="additional-form__item">
               <label class="form__field additional-form__field">
                 <input class="additional-form__control input visually-hidden" type="checkbox" name="Sweetener" checked>
-                <span class="input__mark--checkbox"></span>
+                <span class="input-checkbox"></span>
                 <span class="form__field-label additional-form__field-label">сахарозаменитель</span>
               </label>
             </li>
             <li class="additional-form__item">
               <label class="form__field additional-form__field">
                 <input class="additional-form__control input visually-hidden" type="checkbox" name="Water">
-                <span class="input__mark--checkbox"></span>
+                <span class="input-checkbox"></span>
                 <span class="form__field-label additional-form__field-label">питьевая вода</span>
               </label>
             </li>
             <li class="additional-form__item">
               <label class="form__field additional-form__field">
                 <input class="additional-form__control input visually-hidden" type="checkbox" name="Milk">
-                <span class="input__mark--checkbox"></span>
+                <span class="input-checkbox"></span>
                 <span class="form__field-label additional-form__field-label">молоко</span>
               </label>
             </li>
             <li class="additional-form__item">
               <label class="form__field additional-form__field">
                 <input class="additional-form__control input visually-hidden" type="checkbox" name="Vitamins">
-                <span class="input__mark--checkbox"></span>
+                <span class="input-checkbox"></span>
                 <span class="form__field-label additional-form__field-label">витамины</span>
               </label>
             </li>
           </ul>
         </div>
       </fieldset>
-      <div class="container container--padding form__button-wrapper">
-        <button class="button button__green form__button" type="submit">Отправить заявку</button>
+      <div class="container container__padding form__button-wrapper">
+        <button class="button button--green form__button" type="submit">Отправить заявку</button>
         <p class="form__legend">* — Обязательные поля</p>
       </div>
     </form>
   </main>
   <footer class="footer footer--grey">
-    <div class="container container--padding">
+    <div class="container container__padding">
       <div class="footer__invitation invitation">
         <strong class="invitation__slogan">Приглашаем <br>к сотрудничеству <br> дилеров!</strong>
         <address class="invitation__address">
-          <span class="invitation__address--street">ул. Большая Конюшенная, д. 19/8 </span>
-          <span class="invitation__address--city">Санкт-Петербург</span>
+          <span class="invitation__street">ул. Большая Конюшенная, д. 19/8 </span>
+          <span class="invitation__city">Санкт-Петербург</span>
         </address>
       </div>
     </div>
     <iframe
-    class="invitation__map"
+    class="footer__map"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
     width="320"
     height="362"
@@ -202,7 +202,7 @@
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Мы Вконтакте.</span>
-                <svg class="social__icon--vkontakte" width="28" height="22">
+                <svg class="social__icon social__icon--vkontakte" width="28" height="22">
                   <use xlink:href="img/sprite.svg#vkontakte"></use>
                 </svg>
               </a>
@@ -210,7 +210,7 @@
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Мы в Ютубе.</span>
-                <svg class="social__icon--youtube" width="28" height="22">
+                <svg class="social__icon social__icon--youtube" width="28" height="22">
                   <use xlink:href="img/sprite.svg#youtube"></use>
                 </svg>
               </a>
@@ -218,7 +218,7 @@
             <li class="social__item">
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Мы в Телеграме.</span>
-                <svg class="social__icon--telegram" width="28" height="22">
+                <svg class="social__icon social__icon--telegram" width="28" height="22">
                   <use xlink:href="img/sprite.svg#telegram"></use>
                 </svg>
               </a>

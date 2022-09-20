@@ -22,10 +22,10 @@
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img class="main-header__logo-pic" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип магазина Кэт энерджи.">
           </picture>
-          <img class="main-header__logo-pic--mobile" width="101" height="18" src="img/logo-title-mobile.svg" alt="Логотип магазина Кэт энерджи.">
+          <img class="main-header__logo-mobile" width="101" height="18" src="img/logo-title-mobile.svg" alt="Логотип магазина Кэт энерджи.">
         </a>
       </div>
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -57,7 +57,7 @@
           <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
           <img class="main-product__image" width="280" height="270" alt='' src="img/index-can-phone.png" srcset="img/index-can-phone@2x.png 2x">
         </picture>
-        <button class="button button__green main-product__button" type="button">
+        <button class="button button--green main-product__button" type="button">
           <span>Подобрать программу</span>
         </button>
       </div>
@@ -125,7 +125,7 @@
     <section class="example">
       <h2 class="example__title heading container example__title--desktop">Живой пример</h2>
       <div class="example__container">
-        <div class="example__container--desktop">
+        <div class="example__desktop">
           <div class="container">
             <div class="example__text-container">
               <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой
@@ -154,20 +154,20 @@
           </div>
           <div class="example__illustration">
             <div class="example__illustration-wrapper">
-              <div class="example__illustration--before">
+              <div class="example__illustration-before">
                 <picture>
-                  <source class="example__illustration_picture example__illustration_picture--before" media="(min-width: 768px)" srcset="img/cat-tablet-before.png 1x, img/cat-tablet-before@2x.png 2x">
-                  <img class="example__illustration_picture example__illustration_picture--before" src="img/cat-phone-before.png" width="280" height="256" alt="" srcset="img/cat-phone-before@2x.png 2x">
+                  <source class="example__illustration-picture example__illustration-picture--before" media="(min-width: 768px)" srcset="img/cat-tablet-before.png 1x, img/cat-tablet-before@2x.png 2x">
+                  <img class="example__illustration-picture example__illustration-picture--before" src="img/cat-phone-before.png" width="280" height="256" alt="" srcset="img/cat-phone-before@2x.png 2x">
                 </picture>
               </div>
-              <div class="example__illustration--after">
+              <div class="example__illustration-after">
                 <picture>
                   <source media="(min-width: 768px)" srcset="img/cat-tablet-after.png 1x, img/cat-tablet-after@2x.png 2x">
-                  <img class="example__illustration_picture example__illustration_picture--after" src="img/cat-phone-after.png" width="280" height="256" alt="" srcset="img/cat-phone-after@2x.png 2x">
+                  <img class="example__illustration-picture example__illustration-picture--after" src="img/cat-phone-after.png" width="280" height="256" alt="" srcset="img/cat-phone-after@2x.png 2x">
                 </picture>
               </div>
               <div class="example__illustration-toggle">
-                <button class="example__illustration-toggle--button" type="button">
+                <button class="example__illustration-button" type="button">
                   <span class="visually-hidden">Изменить изображение кота.</span>
                 </button>
               </div>
@@ -179,16 +179,16 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <div class="footer__invitation invitation container--padding">
+      <div class="footer__invitation invitation container__padding">
         <strong class="invitation__slogan">Приглашаем <br>к сотрудничеству <br> дилеров!</strong>
         <address class="invitation__address">
-          <span class="invitation__address--street">ул. Большая Конюшенная, д. 19/8 </span>
-          <span class="invitation__address--city">Санкт-Петербург</span>
+          <span class="invitation__street">ул. Большая Конюшенная, д. 19/8 </span>
+          <span class="invitation__city">Санкт-Петербург</span>
         </address>
       </div>
     </div>
     <iframe
-    class="invitation__map"
+    class="footer__map"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
     width="320"
     height="362"
@@ -216,7 +216,7 @@
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Мы в Ютубе.</span>
-                <svg class="ssocial__icon ocial__icon--youtube" width="28" height="22">
+                <svg class="social__icon social__icon--youtube" width="28" height="22">
                   <use xlink:href="img/sprite.svg#youtube"></use>
                 </svg>
               </a>
