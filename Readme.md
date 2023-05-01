@@ -1,3 +1,5 @@
+permalink: /index.html
+
 # Личный проект «Кэт энерджи»
 
 * Студент: [Анастасия Часовских](https://up.htmlacademy.ru/adaptive/26/user/2050773).
